@@ -1,0 +1,13 @@
+{
+    "resourceIdentifier": "cobblemon:gym_guide",
+    "names": [
+      "§lGrass/Bug Gym Guide§r"
+    ],
+    "presets": [
+      "cobblemon:base_npc"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:grass_bug_gym_guide"
+    }
+}

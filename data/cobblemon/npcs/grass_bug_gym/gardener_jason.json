@@ -1,0 +1,34 @@
+{
+  "resourceIdentifier": "cobblemon:gardener_jason",
+  "names": [
+    "§lGardener Jason§r"
+  ],
+  "presets": [
+    "cobblemon:base_npc",
+    "cobblemon:battle_npc"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:gardener_jason"
+  },
+  "config": [
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.player.data.gardener_jason_defeated = true; q.player.save_data()"
+    }
+  ],
+  "skill": 3,
+  "party": {
+    "type": "simple",
+    "isStatic": true,
+    "pokemon": [
+      "breloom uncatchable=true held_item=cobblemon:heat_rock ability=technician level=35 hp_ev=52 attack_ev=52 defence_ev=52 special_attack_ev=52 special_defence_ev=52 speed_ev=52 nature=jolly hp_iv=11 attack_iv=11 defence_iv=11 special_attack_iv=11 special_defence_iv=11 speed_iv=11 moves=sunnyday,spore,leechseed,brickbreak",
+      "lilligant uncatchable=true held_item=cobblemon:aguav_berry ability=chlorophyll level=35 hp_ev=52 attack_ev=52 defence_ev=52 special_attack_ev=52 special_defence_ev=52 speed_ev=52 nature=timid hp_iv=11 attack_iv=11 defence_iv=11 special_attack_iv=11 special_defence_iv=11 speed_iv=11 moves=quiverdance,petaldance,sleeppowder,dreameater",
+      "leafeon uncatchable=true ability=chlorophyll level=34 hp_ev=52 attack_ev=52 defence_ev=52 special_attack_ev=52 special_defence_ev=52 speed_ev=52 nature=naughty hp_iv=11 attack_iv=11 defence_iv=11 special_attack_iv=11 special_defence_iv=11 speed_iv=11 moves=solarblade,leafblade,weatherball,sunnyday",
+      "exeggutor uncatchable=true held_item=cobblemon:iapapa_berry ability=harvest level=34 hp_ev=52 attack_ev=52 defence_ev=52 special_attack_ev=52 special_defence_ev=52 speed_ev=52 nature=quiet hp_iv=11 attack_iv=11 defence_iv=11 special_attack_iv=11 special_defence_iv=11 speed_iv=11 moves=leechseed,substitute,gigadrain,extrasensory"
+    ]
+  }
+}

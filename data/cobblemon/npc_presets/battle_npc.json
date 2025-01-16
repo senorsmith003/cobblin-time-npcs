@@ -1,0 +1,7 @@
+{
+    "battleConfiguration": {
+        "canChallenge": true
+    },
+    "autoHealParty": true,
+    "randomizePartyOrder": true
+}

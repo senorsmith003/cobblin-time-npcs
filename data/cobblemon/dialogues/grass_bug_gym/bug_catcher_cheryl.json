@@ -1,0 +1,43 @@
+{
+    "initializationAction": [
+        "q.player.data.bug_catcher_cheryl_defeated ? q.dialogue.set_page('post_defeat');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "Well, well, looks like a bug's about to get squashed! Hope you brought bug spray!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "Ugh, I guess I'm the one who got squashed... I need a new web."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

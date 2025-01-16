@@ -1,0 +1,43 @@
+{
+    "initializationAction": [
+        "q.player.data.gardener_jason_defeated ? q.dialogue.set_page('post_defeat');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "Time to prune some weeds! Hope your team's ready for a real growing challenge!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "Looks like I didn't water my team enough... You really leafed me in the dust!"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

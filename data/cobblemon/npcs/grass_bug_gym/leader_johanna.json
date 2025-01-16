@@ -1,0 +1,29 @@
+{
+    "resourceIdentifier": "cobblemon:leader_johanna",    
+    "names": [
+      "§lLeader Johanna§r"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:leader_johanna"
+    },
+    "config": [
+      {
+        "variableName": "on_player_wins",
+        "displayName": "npc.variable.on_player_wins.name",
+        "description": "npc.variable.on_player_wins.desc",
+        "type": "TEXT",
+        "defaultValue": "q.player.data.leader_johanna_defeated = true; q.player.save_data();"
+      }
+    ],
+    "skill": 4,
+    "party": {
+      "type": "script",
+      "script": "cobblemon:leader_johanna_team",
+      "isStatic": false
+    }
+  }
