@@ -27,7 +27,7 @@
     "pokemon": [
       "whimsicott uncatchable=true ability=prankster level=33 hp_ev=52 attack_ev=52 defence_ev=52 special_attack_ev=52 special_defence_ev=52 speed_ev=52 nature=hasty hp_iv=21 attack_iv=21 defence_iv=21 special_attack_iv=21 special_defence_iv=21 speed_iv=21 moves=stunspore,moonblast,uturn,taunt",
       "vespiquen uncatchable=true held_item=cobblemon:figy_berry ability=unnerve level=34 hp_ev=52 attack_ev=52 defence_ev=52 special_attack_ev=52 special_defence_ev=52 speed_ev=52 nature=relaxed hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=aromatherapy,attackorder,defendorder,roost",
-      "gourgeist uncatchable=true pumpkin_size=super held_item=cobblemon:spell_tag ability=insomnia hp_ev=52 attack_ev=52 defence_ev=52 special_attack_ev=52 special_defence_ev=52 speed_ev=52 nature=brave hp_iv=21 attack_iv=21 defence_iv=21 special_attack_iv=21 special_defence_iv=21 speed_iv=21 moves=phantomforce,shadowsneak,powerwhip,trickroom",
+      "gourgeist uncatchable=true pumpkin_size=super held_item=cobblemon:spell_tag ability=insomnia level=34 hp_ev=52 attack_ev=52 defence_ev=52 special_attack_ev=52 special_defence_ev=52 speed_ev=52 nature=brave hp_iv=21 attack_iv=21 defence_iv=21 special_attack_iv=21 special_defence_iv=21 speed_iv=21 moves=phantomforce,shadowsneak,powerwhip,trickroom",
       "cacturne uncatchable=true held_item=cobblemon:custap_berry ability=waterabsorb level=33 hp_ev=52 attack_ev=52 defence_ev=52 special_attack_ev=52 special_defence_ev=52 speed_ev=52 nature=brave hp_iv=21 attack_iv=21 defence_iv=21 special_attack_iv=21 special_defence_iv=21 speed_iv=21 moves=suckerpunch,spikyshield,destinybond,seedbomb"
     ]
   }
