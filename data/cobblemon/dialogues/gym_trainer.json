@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.data.farmer_paul_defeated ? q.dialogue.set_page('post_defeat');"
+        "q.player.get_npc_variable(q.npc, 'npc_defeated', false) ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
         "npc": {
@@ -9,13 +9,6 @@
                 "expression": "q.npc.name"
             },
             "face": "q.npc.face();"
-        },
-        "player": {
-            "face": "q.player.face();",
-            "name": {
-                "type": "expression",
-                "expression": "q.player.username"
-            }
         }
     },
     "pages": [
@@ -23,7 +16,10 @@
             "id": "battle_start",
             "speaker": "npc",
             "lines": [
-                "Y'all ready to harvest some defeat? My crops are growing strong, and so am I!"
+                {
+                    "type": "expression",
+                    "expression": "q.npc.config.battle_start_message;"
+                }
             ],
             "escapeAction": "0",
             "input": [
@@ -35,7 +31,10 @@
             "id": "post_defeat",
             "speaker": "npc",
             "lines": [
-                "Looks like the crop wasn't ripe for a win... Guess I'll try again next season!"
+                {
+                    "type": "expression",
+                    "expression": "q.npc.config.post_defeat_message;"
+                }
             ],
             "input": "q.dialogue.close();"
         }

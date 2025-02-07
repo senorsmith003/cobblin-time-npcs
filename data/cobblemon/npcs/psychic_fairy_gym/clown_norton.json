@@ -1,0 +1,43 @@
+{
+    "resourceIdentifier": "cobblemon:clown_norton",
+    "names": [
+      "§lClown Norton§r"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc",
+      "cobblemon:one_off_battle_npc",
+      "cobblemon:psychic_fairy_gym_trainer"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:gym_trainer"
+    },
+    "config": [
+      {
+        "variableName": "battle_start_message",
+        "displayName": "Battle Start Message",
+        "description": "Message displayed when the player starts a battle.",
+        "type": "TEXT",
+        "defaultValue": "Step right up! The big top battle is here, and I'm about to juggle your dreams of victory! Let's make this a show to remember!"
+      },
+      {
+        "variableName": "post_defeat_message",
+        "displayName": "Defeat Message",
+        "description": "Message displayed when the NPC is defeated.",
+        "type": "TEXT",
+        "defaultValue": "Whoops — down goes the clown! Guess the joke's on me… But hey, every show must end! You win this round, kid—now go steal the spotlight!"
+      }
+    ],
+    "skill": 5,
+    "party": {
+      "type": "simple",
+      "isStatic": true,
+      "pokemon": [
+            "mrmime held_item=cobblemon:light_clay ability=filter level=46 hp_ev=244 special_attack_ev=8 speed_ev=252 nature=timid hp_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=teleport,lightscreen,reflect,foulplay",
+            "slowking held_item=cobblemon:leftovers ability=regenerator level=45 hp_ev=248 special_attack_ev=4 special_defence_ev=252 speed_ev=4 nature=calm hp_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=chillyreception,psychicnoise,slackoff,foulplay",
+            "wigglytuff held_item=cobblemon:assault_vest ability=competitive level=50 hp_ev=252 special_attack_ev=4 special_defence_ev=252 nature=calm hp_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=thunderbolt,icebeam,fireblast,drainingkiss",
+            "hypno held_item=cobblemon:aguav_berry ability=insomnia level=46 hp_ev=252 attack_ev=252 special_defence_ev=4 nature=adamant hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=hypnosis,bellydrum,zenheadbutt,drainpunch"
+          ]
+    }
+  }

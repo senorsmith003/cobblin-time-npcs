@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "(q.player.data.grass_bug_gym_defeated > 0) ? q.dialogue.set_page('post_defeat');"
+        "(q.player.data.psychic_fairy_gym_defeated > 0) ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
         "npc": {
@@ -16,7 +16,7 @@
             "id": "page1",
             "speaker": "npc",
             "lines": [
-                "Hey there champ-to-be! Welcome to the grass/bug gym."
+                "Hey there champ-to-be! Welcome to the psychic/fairy gym. Or should I say, the carnival!"
             ],
             "input": "q.dialogue.next_page();"
         },
@@ -24,7 +24,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "To challenge the Leader Johanna, you have to first go through the leaf maze and take out her three grass/bug trainers."
+                "There sure is a lot to do around here. So have a look around, take in the sights... and you might even bump into a few trainers."
             ],
             "input": "q.dialogue.next_page();"
         },
@@ -32,7 +32,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "You didn't hear it from me, but fire and flying types are the way to go here. But watch out for surprises!"
+                "You didn't hear it from me, but steel types are good against fairy, and psychic types can't mind-bend steel!"
             ],
             "input": "q.dialogue.next_page();"
         },
@@ -40,7 +40,7 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "If you're looking for a fair fight, your pokemon should be between level 35-40 for this gym."                
+                "If you're looking for a fair fight, your pokemon should be between level 45-50 for this gym."                
             ],
             "input": "q.dialogue.next_page();"
         },
@@ -48,19 +48,19 @@
             "id": "page5",
             "speaker": "npc",
             "lines": [
-                "That being said, you can re-challenge Leader Johanna as much as you want after you beat her once, and she'll have a much more challenging team suitable for any player."
+                "That being said, the gym leader has a much more challenging rematch team for after you get the gym badge."
             ],
-            "input": "q.player.data.grass_bug_gym_item_given ? q.dialogue.set_page('page6') : q.dialogue.set_page('helpful_item');"
+            "input": "q.player.data.psychic_fairy_gym_item_given ? q.dialogue.set_page('page6') : q.dialogue.set_page('helpful_item');"
         },
         {
             "id": "helpful_item",
             "speaker": "npc",
             "lines": [
-                "Those bug types can give your pokemon all kinds of status conditions, so take this!"
+                "There's a lot of special attackers around here - this should help you out."
             ],
             "input": [
-                "q.run_command('give ' + q.player.username + ' cobblemon:full_heal');",
-                "q.player.data.grass_bug_gym_item_given = true;",
+                "q.run_command('give ' + q.player.username + ' cobblemon:assault_vest');",
+                "q.player.data.psychic_fairy_gym_item_given = true;",
                 "q.player.save_data();",
                 "q.dialogue.next_page();"
             ]
@@ -77,7 +77,7 @@
             "id": "post_defeat",
             "speaker": "npc",
             "lines": [
-                "Wow, you beat her! You are good! Don't forget, you can rechallenge her more formidable team at any time."
+                "Wow, you beat the ringmaster! I knew you could do it, champ! Don't forget you can take on the gym leader's super-powered rematch team."
             ],
             "input": "q.dialogue.close();"
         }

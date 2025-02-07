@@ -1,0 +1,13 @@
+{
+    "resourceIdentifier": "cobblemon:gym_guide",
+    "names": [
+      "§lPsychic/Fairy Gym Guide§r"
+    ],
+    "presets": [
+      "cobblemon:base_npc"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:psychic_fairy_gym_guide"
+    }
+}

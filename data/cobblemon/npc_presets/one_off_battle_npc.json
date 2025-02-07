@@ -1,0 +1,11 @@
+{
+    "config": [
+        {
+            "variableName": "defeat_tracking",
+            "displayName": "npc.variable.defeat_tracking.name",
+            "description": "npc.variable.defeat_tracking.desc",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        }
+    ]
+}

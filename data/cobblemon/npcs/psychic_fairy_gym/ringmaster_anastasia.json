@@ -1,7 +1,7 @@
 {
-    "resourceIdentifier": "cobblemon:leader_johanna",    
+    "resourceIdentifier": "cobblemon:ringmaster_anastasia",    
     "names": [
-      "§lLeader Johanna§r"
+      "§lRingmaster Anastasia§r"
     ],
     "presets": [
       "cobblemon:base_npc",
@@ -9,7 +9,7 @@
     ],
     "interaction": {
       "type": "dialogue",
-      "dialogue": "cobblemon:leader_johanna"
+      "dialogue": "cobblemon:ringmaster_anastasia"
     },
     "config": [
       {
@@ -17,13 +17,13 @@
         "displayName": "npc.variable.on_player_wins.name",
         "description": "npc.variable.on_player_wins.desc",
         "type": "TEXT",
-        "defaultValue": "q.run_script('cobblemon:grass_bug_gym_defeated')"
+        "defaultValue": "q.run_script('cobblemon:psychic_fairy_gym_defeated')"
       }
     ],
     "skill": 5,
     "party": {
       "type": "script",
-      "script": "cobblemon:leader_johanna_team",
+      "script": "cobblemon:ringmaster_anastasia_team",
       "isStatic": false
     }
   }

@@ -5,22 +5,31 @@
   ],
   "presets": [
     "cobblemon:base_npc",
-    "cobblemon:battle_npc"
+    "cobblemon:battle_npc",
+    "cobblemon:one_off_battle_npc",
+    "cobblemon:grass_bug_gym_trainer"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:gardener_jason"
+    "dialogue": "cobblemon:gym_trainer"
   },
   "config": [
     {
-      "variableName": "on_player_wins",
-      "displayName": "npc.variable.on_player_wins.name",
-      "description": "npc.variable.on_player_wins.desc",
+      "variableName": "battle_start_message",
+      "displayName": "Battle Start Message",
+      "description": "Message displayed when the player starts a battle.",
       "type": "TEXT",
-      "defaultValue": "q.player.data.gardener_jason_defeated = true; q.player.save_data()"
+      "defaultValue": "Time to prune some weeds! Hope your team's ready for a real growing challenge!"
+    },
+    {
+      "variableName": "post_defeat_message",
+      "displayName": "Defeat Message",
+      "description": "Message displayed when the NPC is defeated.",
+      "type": "TEXT",
+      "defaultValue": "Looks like I didn't water my team enough... You really leafed me in the dust!"
     }
   ],
-  "skill": 3,
+  "skill": 5,
   "party": {
     "type": "simple",
     "isStatic": true,

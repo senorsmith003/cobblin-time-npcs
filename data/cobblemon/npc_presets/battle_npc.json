@@ -3,5 +3,5 @@
         "canChallenge": true
     },
     "autoHealParty": true,
-    "randomizePartyOrder": true
+    "randomizePartyOrder": false
 }

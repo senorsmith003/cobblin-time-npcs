@@ -1,0 +1,12 @@
+q.player.data.psychic_fairy_gym_defeated = q.player.data.psychic_fairy_gym_defeated + 1;
+q.player.save_data();
+
+(q.player.data.psychic_fairy_gym_defeated > 1) ? {
+    q.run_command('tellraw @a ["",{"text":"' + q.player.username + '  has just defeated "},{"text":"Ringmaster Anastasia","color":"light_purple"},{"text":"\'s tough rematch team! They\'ve beaten this gym ' + q.player.data.psychic_fairy_gym_defeated + ' times. Way to go!"}]');
+    return 1;
+} : {
+    q.player.tell(q.npc.name + ': And with that, the curtain falls… a performance well worth the applause! For this, you have earned the §l§dSoul Badge§r§0!');
+    q.run_command('give ' + q.player.username + ' cobblemonpokemonbadges:soul_badge[lore=[\'["",{"text":"Given to ","italic":false}, {"text":"' + q.player.username + '","italic":false,"color":"white"},{"text":" for beating ","italic":false},{"text":"Ringmaster Anastasia","italic":false,"color":"light_purple"},{"text":"!","italic":false,"color":"white"}]\']]');
+    return 1;
+};
+return 0;

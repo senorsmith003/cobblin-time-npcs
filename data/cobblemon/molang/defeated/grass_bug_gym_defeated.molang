@@ -1,0 +1,12 @@
+q.player.data.grass_bug_gym_defeated = q.player.data.grass_bug_gym_defeated + 1;
+q.player.save_data();
+
+(q.player.data.grass_bug_gym_defeated > 1) ? {
+    q.run_command('tellraw @a ["",{"text":"' + q.player.username + '  has just defeated "},{"text":"Leader Johanna","color":"dark_green"},{"text":"\'s tough rematch team! They\'ve beaten this gym ' + q.player.data.grass_bug_gym_defeated + ' times. Way to go!"}]');
+    return 1;
+} : {
+    q.player.tell(q.npc.name + ': You\'ve bested me and my bug and grass types! For this, you have earned the §l§2Forest Badge§r§0!');
+    q.run_command('give ' + q.player.username + ' cobblemonpokemonbadges:forest_badge[lore=[\'["",{"text":"Given to ","italic":false}, {"text":"' + q.player.username + '","italic":false,"color":"white"},{"text":" for beating ","italic":false},{"text":"Leader Johanna","italic":false,"color":"dark_green"},{"text":"!","italic":false,"color":"white"}]\']]');
+    return 1;
+};
+return 0;

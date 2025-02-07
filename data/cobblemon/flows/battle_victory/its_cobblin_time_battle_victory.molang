@@ -1,0 +1,9 @@
+for_each(t.npc_loser, c.npc_losers, {
+    t.npc_loser.npc.config.defeat_tracking ? {
+        for_each(t.player_actor, c.players, {
+            t.data = t.player_actor.player.get_npc_data(t.npc_loser.npc.uuid);
+            t.data.npc_defeated = true;
+            t.player_actor.player.save_data();
+        });
+    };
+});

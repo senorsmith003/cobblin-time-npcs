@@ -1,7 +1,7 @@
 {
     "initializationAction": [
         "q.npc.is_doing_activity('cobblemon:battling') ? q.dialogue.close();",
-        "q.player.data.grass_bug_gym_defeated ? q.dialogue.set_page('post_defeat');"
+        "(q.player.data.psychic_fairy_gym_defeated > 0) ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
         "npc": {
@@ -21,18 +21,26 @@
     },
     "pages": [
         {
-            "id": "greeting",
+            "id": "greeting1",
             "speaker": "npc",
             "lines": [
-                "Greetings. I am Johanna, the leader of the grass/bug gym."
+                "Welcome, welcome, to the grandest stage of them all!"
             ],
-            "input": "(q.player.data.grass_bug_gym_progress < 3) ? q.dialogue.set_page('defeat_trainers') : q.dialogue.set_page('trainers_defeated');"
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "I am Anastasia, ringmaster of this enchanting spectacle!"
+            ],
+            "input": "q.player.data.psychic_fairy_gym_progress < 2 ? q.dialogue.set_page('defeat_trainers') : q.dialogue.set_page('trainers_defeated');"
         },
         {
             "id": "defeat_trainers",
             "speaker": "npc",
             "lines": [
-                "Before you can battle me, you must first navigate the maze beneath me and defeat the trainers of the gym. Good luck!"
+                "Before you can battle me, you must first explore my circus and defeat my two trainers. Good luck!"
             ],
             "input": "q.dialogue.close();"
         },
@@ -40,7 +48,7 @@
             "id": "trainers_defeated",
             "speaker": "npc",
             "lines": [
-                "Congratulations! You've defeated my bug catcher, farmer, and gardener - and wow, you are strong!"
+                "Here, strength is nothing without a touch of magic — let's see if you have the skill to command the spotlight!"
             ],
             "input": "q.dialogue.set_page('battle_prompt');"
         },
@@ -48,7 +56,7 @@
             "id": "battle_prompt",
             "speaker": "npc",
             "lines": [
-                "So, what do you say? Would you like to challenge me to a battle?"
+                "So, what do you say? Can you handle my act?"
             ],
             "input": {
                 "type": "option",

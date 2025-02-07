@@ -1,0 +1,42 @@
+{
+    "resourceIdentifier": "cobblemon:clown_norton",
+    "names": [
+      "§lStrongwoman Katya§r"
+    ],
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:battle_npc",
+      "cobblemon:one_off_battle_npc",
+      "cobblemon:psychic_fairy_gym_trainer"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:gym_trainer"
+    },
+    "config": [
+      {
+        "variableName": "battle_start_message",
+        "displayName": "Battle Start Message",
+        "description": "Message displayed when the player starts a battle.",
+        "type": "TEXT",
+        "defaultValue": "I'm the one who makes the bell ring around here! Let's see if you can hit as hard as you think you can."
+      },
+      {
+        "variableName": "post_defeat_message",
+        "displayName": "Defeat Message",
+        "description": "Message displayed when the NPC is defeated.",
+        "type": "TEXT",
+        "defaultValue": "Well, looks like you've got more muscle than I gave you credit for. Guess I'm not the strongest after all."
+      }
+    ],
+    "skill": 5,
+    "party": {
+      "type": "simple",
+      "isStatic": true,
+      "pokemon": [
+            "tinkaton uncatchable=true held_item=cobblemon:air_balloon ability=pickpocket level=45 hp_ev=248 attack_ev=16 speed_ev=244 nature=jolly hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=gigatonhammer,knockoff,encore,thunderwave",
+            "gallade uncatchable=true held_item=cobblemon:life_orb ability=sharpness level=46 hp_ev=252 speed_ev=248 nature=adamant hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=agility,sacredsword,psychocut,leafblade",
+            "rapidash galarian uncatchable=true held_item=cobblemon:ground_gem ability=pastelveil level=47 attack_ev=252 defence_ev=4 speed_ev=252 nature=jolly hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=swordsdance,playrough,highhorsepower,morningsun"
+          ]
+    }
+  }
