@@ -1,0 +1,717 @@
+{
+    "initializationAction": [
+        "q.player.data.pokedex_rewards_received == 14 ? q.dialogue.set_page('completed-1');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting-0",
+            "speaker": "npc",
+            "lines": [
+                "Hi there trainer!"
+            ],
+            "input": "q.player.data.starter_items_given ? q.dialogue.set_page('data-1') : q.dialogue.next_page();"
+        },
+        {
+            "id": "greeting-1",
+            "speaker": "npc",
+            "lines": [
+                "Good day to you! The name's Professor Mangrove, and I'm here to help you with your Pokemon adventures!"
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "greeting-2",
+            "speaker": "npc",
+            "lines": [
+                "I'm interested in researching the Pokemon in this world. But, my legs are frozen - so I need your help."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "greeting-3",
+            "speaker": "npc",
+            "lines": [
+                "First off, would you like a set of items to help you get started on the server?"
+            ],
+            "input": {
+                "type": "option",
+                "options": [
+                    {
+                        "text": "Yes please!",
+                        "value": "yes",
+                        "action": [
+                            "q.run_script('cobblemon:starter_items');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "Nah, I'm hardcore",
+                        "value": "no",
+                        "action": [
+                            "q.player.data.starter_items_given = true; q.player.save_data();",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:pokedex_red');",
+                            "q.dialogue.next_page();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "greeting-4",
+            "speaker": "npc",
+            "lines": [
+                "The Pokedex is a very useful tool for logging which Pokemon you have caught and seen! I will throw one at you now."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "greeting-5",
+            "speaker": "npc",
+            "lines": [
+                "All your data is hooked right up to my machine here. Not for nefarious purposes of course. It's just part of my... research. Anyways..."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "data-1",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'According to my data, you have caught ' + q.player.pokedex.caught_count + ' Pokemon and seen ' + q.player.pokedex.seen_count + '!'"
+                }
+            ],
+            "input": [
+                "(q.player.data.pokedex_rewards_received < 1) && (q.player.pokedex.caught_count >= 50) ? { q.dialogue.set_page('rewards1-1'); return 1; };",
+                "(q.player.data.pokedex_rewards_received < 2) && (q.player.pokedex.caught_count >= 100) ? { q.dialogue.set_page('rewards2-1'); return 1; };",
+                "(q.player.data.pokedex_rewards_received < 3) && (q.player.pokedex.caught_count >= 150) ? { q.dialogue.set_page('rewards3-1'); return 1; };",
+                "(q.player.data.pokedex_rewards_received < 4) && (q.player.pokedex.caught_count >= 200) ? { q.dialogue.set_page('rewards4-1'); return 1; };",
+                "(q.player.data.pokedex_rewards_received < 5) && (q.player.pokedex.caught_count >= 250) ? { q.dialogue.set_page('rewards5-1'); return 1; };",
+                "(q.player.data.pokedex_rewards_received < 6) && (q.player.pokedex.caught_count >= 300) ? { q.dialogue.set_page('rewards6-1'); return 1; };",
+                "(q.player.data.pokedex_rewards_received < 7) && (q.player.pokedex.caught_count >= 350) ? { q.dialogue.set_page('rewards7-1'); return 1; };",
+                "(q.player.data.pokedex_rewards_received < 8) && (q.player.pokedex.caught_count >= 400) ? { q.dialogue.set_page('rewards8-1'); return 1; };",
+                "(q.player.data.pokedex_rewards_received < 9) && (q.player.pokedex.caught_count >= 450) ? { q.dialogue.set_page('rewards9-1'); return 1; };",
+                "(q.player.data.pokedex_rewards_received < 10) && (q.player.pokedex.caught_count >= 500) ? { q.dialogue.set_page('rewards10-1'); return 1; };",
+                "(q.player.data.pokedex_rewards_received < 11) && (q.player.pokedex.caught_count >= 550) ? { q.dialogue.set_page('rewards11-1'); return 1; };",
+                "(q.player.data.pokedex_rewards_received < 12) && (q.player.pokedex.caught_count >= 600) ? { q.dialogue.set_page('rewards12-1'); return 1; };",
+                "(q.player.data.pokedex_rewards_received < 13) && (q.player.pokedex.caught_count >= 650) ? { q.dialogue.set_page('rewards13-1'); return 1; };",
+                "(q.player.data.pokedex_rewards_received < 14) && (q.player.pokedex.caught_count >= 698) ? { q.dialogue.set_page('rewards14-1'); return 1; };",
+                "q.dialogue.next_page();"
+            ]
+        },
+        {
+            "id": "no-rewards",
+            "speaker": "npc",
+            "lines": [
+                "Keep on catching Pokemon, and for every 50 you catch, I'll give you something as a thank you. Take care!"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "rewards1-1",
+            "speaker": "npc",
+            "lines": [
+                "Fantastic, you've already caught 50 Pokemon! You're definitely getting the hang of catching."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards1-2",
+            "speaker": "npc",
+            "lines": [
+                "This reward should help you catch even more, especially those found in water!"
+            ],
+            "input": [
+                "q.run_script('cobblemon:pokedex_rewards');",
+                "(q.player.pokedex.caught_count >= 100) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+            ]
+        },
+        {
+            "id": "rewards2-1",
+            "speaker": "npc",
+            "lines": [
+                "100 Pokemon already! What a milestone. Speaking of stones..."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards2-2",
+            "speaker": "npc",
+            "lines": [
+                "Pick one of these stones as a reward for your hard work!"
+            ],
+            "input": {
+                "type": "option",
+                "options": [
+                    {
+                        "text": "§9Water Stone§r",
+                        "value": "water_stone",
+                        "action": [
+                            "v.stone_choice_1 = 'water_stone';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§6Fire Stone§r",
+                        "value": "fire_stone",
+                        "action": [
+                            "v.stone_choice_1 = 'fire_stone';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§eThunder Stone§r",
+                        "value": "thunder_stone",
+                        "action": [
+                            "v.stone_choice_1 = 'thunder_stone';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§2Leaf Stone§r",
+                        "value": "leaf_stone",
+                        "action": [
+                            "v.stone_choice_1 = 'leaf_stone';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§bIce Stone§r",
+                        "value": "ice_stone",
+                        "action": [
+                            "v.stone_choice_1 = 'ice_stone';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "rewards2-3",
+            "speaker": "npc",
+            "lines": [
+                "Great choice! Any of those stones will work on this little guy... take care of them!"
+            ],
+            "input": "(q.player.pokedex.caught_count >= 150) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+        },
+        {
+            "id": "rewards3-1",
+            "speaker": "npc",
+            "lines": [
+                "Wow, you've caught 150 Pokemon! Here's a gift to help you train for battles."
+            ],
+            "input": [
+                "q.run_script('cobblemon:pokedex_rewards');",
+                "q.dialogue.next_page();"
+            ]
+        },
+        {
+            "id": "rewards3-2",
+            "speaker": "npc",
+            "lines": [
+                "I remember when I used to battle... until my legs got frozen, of course. Don't use Ice Beam with your eyes closed."
+            ],
+            "input": "(q.player.pokedex.caught_count >= 200) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+        },
+        {
+            "id": "rewards4-1",
+            "speaker": "npc",
+            "lines": [
+                "200 Pokemon captured! Another awesome milestone. Speaking of stones..."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards4-2",
+            "speaker": "npc",
+            "lines": [
+                "Wait did I already use that line? Anyways."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards4-3",
+            "speaker": "npc",
+            "lines": [
+                "Pick one of these stones as a reward for your hard work!"
+            ],
+            "input": {
+                "type": "option",
+                "options": [
+                    {
+                        "text": "§cSun Stone§r",
+                        "value": "sun_stone",
+                        "action": [
+                            "v.stone_choice_2 = 'sun_stone';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§7Moon Stone§r",
+                        "value": "moon_stone",
+                        "action": [
+                            "v.stone_choice_2 = 'moon_stone';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§fShiny Stone§r",
+                        "value": "shiny_stone",
+                        "action": [
+                            "v.stone_choice_2 = 'shiny_stone';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§jDusk Stone§r",
+                        "value": "dusk_stone",
+                        "action": [
+                            "v.stone_choice_2 = 'dusk_stone';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§3Dawn Stone§r",
+                        "value": "dawn_stone",
+                        "action": [
+                            "v.stone_choice_2 = 'dawn_stone';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "rewards4-4",
+            "speaker": "npc",
+            "lines": [
+                "Cool stone bro. Use it wisely, these ones can be hard to find."
+            ],
+            "input": "(q.player.pokedex.caught_count >= 250) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+        },
+        {
+            "id": "rewards5-1",
+            "speaker": "npc",
+            "lines": [
+                "250 Pokemon to your name! You're becoming a true collector. Take these sweet treats as your next reward!"
+            ],
+            "input": [
+                "q.run_script('cobblemon:pokedex_rewards');",
+                "q.dialogue.next_page();"
+            ]
+        },
+        {
+            "id": "rewards5-2",
+            "speaker": "npc",
+            "lines": [
+                "Top tip: use these on higher level Pokemon so you're getting the most value for each candy."
+            ],
+            "input": "(q.player.pokedex.caught_count >= 300) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+        },
+        {
+            "id": "rewards6-1",
+            "speaker": "npc",
+            "lines": [
+                "Well well well, look who has 300 Pokemon! Congratulations on hitting your next mileSTONE."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards6-2",
+            "speaker": "npc",
+            "lines": [
+                "BUT! I don't exactly have a stone for you this time. I've got something else from the mines..."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards6-3",
+            "speaker": "npc",
+            "lines": [
+                "Pick one of these fossils as a reward for your hard work!"
+            ],
+            "input": {
+                "type": "option",
+                "options": [
+                    {
+                        "text": "§pOld Amber§r",
+                        "value": "old_amber_fossil",
+                        "action": [
+                            "v.fossil_choice = 'old_amber_fossil';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§1Skull Fossil§r",
+                        "value": "skull_fossil",
+                        "action": [
+                            "v.fossil_choice = 'skull_fossil';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§0Armor Fossil§r",
+                        "value": "armor_fossil",
+                        "action": [
+                            "v.fossil_choice = 'armor_fossil';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§tDome Fossil§r",
+                        "value": "dome_fossil",
+                        "action": [
+                            "v.fossil_choice = 'dome_fossil';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§nHelix Fossil§r",
+                        "value": "helix_fossil",
+                        "action": [
+                            "v.fossil_choice = 'helix_fossil';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "rewards6-4",
+            "speaker": "npc",
+            "lines": [
+                "Sometimes I wish I was sealed in the earth inside a rock for millions of years."
+            ],
+            "input": "(q.player.pokedex.caught_count >= 350) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+        },
+        {
+            "id": "rewards7-1",
+            "speaker": "npc",
+            "lines": [
+                "350 Pokemon. You're basically half way there! Here's a little thank you present."
+            ],
+            "input": [
+                "q.run_script('cobblemon:pokedex_rewards');",
+                "q.dialogue.next_page();"
+            ]
+        },
+        {
+            "id": "rewards7-2",
+            "speaker": "npc",
+            "lines": [
+                "Just don't use it on your hoe, no-one wants to see that advancement."
+            ],
+            "input": "(q.player.pokedex.caught_count >= 400) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+        },
+        {
+            "id": "rewards8-1",
+            "speaker": "npc",
+            "lines": [
+                "Congrats on 400 Pokemon! I'm sure you've been spending plenty of time breeding, so I hope these will help you out."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards8-2",
+            "speaker": "npc",
+            "lines": [
+                "I MEANT BREEDING COBBLEMON BY THE WAY"
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards8-3",
+            "speaker": "npc",
+            "lines": [
+                "But hey, you do whatever you want in your free time!"
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards8-4",
+            "speaker": "npc",
+            "lines": [
+                "I'M NOT INSINUATING THAT YOU BREED WITH COBBLEMON"
+            ],
+            "input": [
+                "q.run_script('cobblemon:pokedex_rewards');",
+                "q.dialogue.next_page();"
+            ]
+        },
+        {
+            "id": "rewards8-5",
+            "speaker": "npc",
+            "lines": [
+                "Enjoy the items :)"
+            ],
+            "input": "(q.player.pokedex.caught_count >= 450) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+        },
+        {
+            "id": "rewards9-1",
+            "speaker": "npc",
+            "lines": [
+                "450 Pokemon - unbelievable! I'm gonna die of excitement! Good thing I have one of these!"
+            ],
+            "input": [
+                "q.run_script('cobblemon:pokedex_rewards');",
+                "q.dialogue.next_page();"
+            ]
+        },
+        {
+            "id": "rewards9-2",
+            "speaker": "npc",
+            "lines": [
+                "Although, now I've given you my totem, I should probably be a bit more careful. Especially with legs like mine."
+            ],
+            "input": "(q.player.pokedex.caught_count >= 500) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+        },
+        {
+            "id": "rewards10-1",
+            "speaker": "npc",
+            "lines": [
+                "I have a really exciting gift for you, for hitting 500 Pokemon! I don't even know where I found these!"
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards10-2",
+            "speaker": "npc",
+            "lines": [
+                "Pick one of these as a reward for your hard work!"
+            ],
+            "input": {
+                "type": "option",
+                "options": [
+                    {
+                        "text": "§dAbility Patch§r",
+                        "value": "ability_patch",
+                        "action": [
+                            "v.ability_item_choice = 'ability_patch';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§uAbility Capsule§r",
+                        "value": "ability_capsule",
+                        "action": [
+                            "v.ability_item_choice = 'ability_capsule';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "rewards10-3",
+            "speaker": "npc",
+            "lines": [
+                "If I had an ability, it would be Long Reach. Because my arms are reeeeeeeeeally long."
+            ],
+            "input": "(q.player.pokedex.caught_count >= 550) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+        },
+        {
+            "id": "rewards11-1",
+            "speaker": "npc",
+            "lines": [
+                "550 Pokemon in the dex! I didn't even realise there were that many! Here's a gift."
+            ],
+            "input": [
+                "q.run_script('cobblemon:pokedex_rewards');",
+                "q.dialogue.next_page();"
+            ]
+        },
+        {
+            "id": "rewards11-2",
+            "speaker": "npc",
+            "lines": [
+                "I tried eating dinner with one of those - did not go to plan."
+            ],
+            "input": "(q.player.pokedex.caught_count >= 600) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+        },
+        {
+            "id": "rewards12-1",
+            "speaker": "npc",
+            "lines": [
+                "You've caught a whole 600 different Pokemon! Are you okay???"
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards12-2",
+            "speaker": "npc",
+            "lines": [
+                "You should really get out more. So take these and go do some farming."
+            ],
+            "input": [
+                "q.run_script('cobblemon:pokedex_rewards');",
+                "(q.player.pokedex.caught_count >= 650) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+            ]
+        },
+        {
+            "id": "rewards13-1",
+            "speaker": "npc",
+            "lines": [
+                "Hi, how are you do- 650 POKEMON?!?!?!"
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards13-2",
+            "speaker": "npc",
+            "lines": [
+                "I'm really running out of gifts now..."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards13-3",
+            "speaker": "npc",
+            "lines": [
+                "*searches*"
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards13-4",
+            "speaker": "npc",
+            "lines": [
+                "Okay, I found these in the bottom of my bag. Don't use them all at once!"
+            ],
+            "input": [
+                "q.run_script('cobblemon:pokedex_rewards');",
+                "(q.player.pokedex.caught_count >= 698) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+            ]
+        },
+        {
+            "id": "rewards14-1",
+            "speaker": "npc",
+            "lines": [
+                "This is it. You've actually done it. You've completed the Pokedex!!!"
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards14-2",
+            "speaker": "npc",
+            "lines": [
+                "For your final gift, I had to search the world, scouring the darkest depths, and encountering strange lands..."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards14-3",
+            "speaker": "npc",
+            "lines": [
+                "Which was really difficult with two frozen legs."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewards14-4",
+            "speaker": "npc",
+            "lines": [
+                "So tell me, which of these guys would you like to join your team?"
+            ],
+            "input": {
+                "type": "option",
+                "options": [
+                    {
+                        "text": "§9Walking Wake§r",
+                        "value": "walkingwake",
+                        "action": [
+                            "v.paradox_choice = 'walkingwake';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    },
+                    {
+                        "text": "§qIron Leaves§r",
+                        "value": "ironleaves",
+                        "action": [
+                            "v.paradox_choice = 'ironleaves';",
+                            "q.run_script('cobblemon:pokedex_rewards');",
+                            "q.dialogue.next_page();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "completed-1",
+            "speaker": "npc",
+            "lines": [
+                "Your research has benefitted me exponentially. But don't stop now!"
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "completed-2",
+            "speaker": "npc",
+            "lines": [
+                "Continue to search the world, battle trainers, and you may stumble across even more Pokemon than we even knew existed!"
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "completed-3",
+            "speaker": "npc",
+            "lines": [
+                "And please come back and say hello every once in a while!"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "rewardsxx-1",
+            "speaker": "npc",
+            "lines": [
+                "You're back again? With 698 Pokemon caught? How do they all fit in the PC? Do you remember all of their names?"
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewardsxx-2",
+            "speaker": "npc",
+            "lines": [
+                "I guess that's what the Pokedex is for. Anyways, I guess I have to give you something else."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "rewardsxx-3",
+            "speaker": "npc",
+            "lines": [
+                "Watch out, this one's quite heavy."
+            ],
+            "input": [
+                "q.run_script('cobblemon:pokedex_rewards');",
+                "(q.player.pokedex.caught_count >= 714) ? q.dialogue.next_page() : q.dialogue.set_page('no-rewards');"
+            ]
+        }
+    ]
+}

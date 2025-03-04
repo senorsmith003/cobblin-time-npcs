@@ -1,0 +1,120 @@
+(q.player.data.pokedex_rewards_received < 1) && (q.player.pokedex.caught_count >= 50) ? {
+    q.run_command('give ' + q.player.username + ' cobblemon:pokerod_smithing_template');
+    q.player.data.pokedex_rewards_received = 1;
+    q.player.save_data();
+    return 1;
+};
+
+(q.player.data.pokedex_rewards_received < 2) && (q.player.pokedex.caught_count >= 100) ? {
+    q.run_command('give ' + q.player.username + ' cobblemon:' + v.stone_choice_1);
+    q.player.data.pokedex_rewards_received = 2;
+    q.player.save_data();
+    return 1;
+};
+
+(q.player.data.pokedex_rewards_received < 3) && (q.player.pokedex.caught_count >= 150) ? {
+    q.run_command('give ' + q.player.username + ' cobblemon:hp_up 16');
+    q.run_command('give ' + q.player.username + ' cobblemon:protein 16');
+    q.run_command('give ' + q.player.username + ' cobblemon:iron 16');
+    q.run_command('give ' + q.player.username + ' cobblemon:calcium 16');
+    q.run_command('give ' + q.player.username + ' cobblemon:zinc 16');
+    q.run_command('give ' + q.player.username + ' cobblemon:carbos 16');
+    q.run_command('give ' + q.player.username + ' cobblemon:pp_up 12');
+    q.run_command('give ' + q.player.username + ' cobblemon:pp_max 16');
+    q.player.data.pokedex_rewards_received = 3;
+    q.player.save_data();
+    return 1;
+};
+
+(q.player.data.pokedex_rewards_received < 4) && (q.player.pokedex.caught_count >= 200) ? {
+    q.run_command('give ' + q.player.username + ' cobblemon:' + v.stone_choice_2);
+    q.run_command('givepokemonegg ' + q.player.username + ' eevee');
+    q.player.data.pokedex_rewards_received = 4;
+    q.player.save_data();
+    return 1;
+};
+
+(q.player.data.pokedex_rewards_received < 5) && (q.player.pokedex.caught_count >= 250) ? {
+    q.run_command('give ' + q.player.username + ' cobblemon:rare_candy 16');
+    q.player.data.pokedex_rewards_received = 5;
+    q.player.save_data();
+    return 1;
+};
+
+(q.player.data.pokedex_rewards_received < 6) && (q.player.pokedex.caught_count >= 300) ? {
+    q.run_command('give ' + q.player.username + ' cobblemon:' + v.fossil_choice);
+    q.player.data.pokedex_rewards_received = 6;
+    q.player.save_data();
+    return 1;
+};
+
+(q.player.data.pokedex_rewards_received < 7) && (q.player.pokedex.caught_count >= 350) ? {
+    q.run_command('give ' + q.player.username + ' minecraft:netherite_ingot 2');
+    q.player.data.pokedex_rewards_received = 7;
+    q.player.save_data();
+    return 1;
+};
+
+(q.player.data.pokedex_rewards_received < 8) && (q.player.pokedex.caught_count >= 400) ? {
+    q.run_command('give ' + q.player.username + ' cobblemon:power_anklet');
+    q.run_command('give ' + q.player.username + ' cobblemon:power_band');
+    q.run_command('give ' + q.player.username + ' cobblemon:power_belt');
+    q.run_command('give ' + q.player.username + ' cobblemon:power_bracer');
+    q.run_command('give ' + q.player.username + ' cobblemon:power_lens');
+    q.run_command('give ' + q.player.username + ' cobblemon:power_weight');
+    q.run_command('give ' + q.player.username + ' cobblemon:destiny_knot');
+    q.player.data.pokedex_rewards_received = 8;
+    q.player.save_data();
+    return 1;
+};
+
+(q.player.data.pokedex_rewards_received < 9) && (q.player.pokedex.caught_count >= 450) ? {
+    q.run_command('give ' + q.player.username + ' minecraft:totem_of_undying');
+    q.player.data.pokedex_rewards_received = 9;
+    q.player.save_data();
+    return 1;
+};
+
+(q.player.data.pokedex_rewards_received < 10) && (q.player.pokedex.caught_count >= 500) ? {
+    q.run_command('give ' + q.player.username + ' cobblemon:' + v.ability_item_choice);
+    q.run_command('give ' + q.player.username + ' cobblemon:ability_shield');
+    q.player.data.pokedex_rewards_received = 10;
+    q.player.save_data();
+    return 1;
+};
+
+(q.player.data.pokedex_rewards_received < 11) && (q.player.pokedex.caught_count >= 550) ? {
+    q.run_command('give ' + q.player.username + ' minecraft:trident');
+    q.player.data.pokedex_rewards_received = 11;
+    q.player.save_data();
+    return 1;
+};
+
+(q.player.data.pokedex_rewards_received < 12) && (q.player.pokedex.caught_count >= 600) ? {
+    q.run_command('give ' + q.player.username + ' cobblemon:pomeg_berry');
+    q.run_command('give ' + q.player.username + ' cobblemon:kelpsy_berry');
+    q.run_command('give ' + q.player.username + ' cobblemon:qualot_berry');
+    q.run_command('give ' + q.player.username + ' cobblemon:hondew_berry');
+    q.run_command('give ' + q.player.username + ' cobblemon:grepa_berry');
+    q.run_command('give ' + q.player.username + ' cobblemon:tamato_berry');
+    q.player.data.pokedex_rewards_received = 12;
+    q.player.save_data();
+    return 1;
+};
+
+(q.player.data.pokedex_rewards_received < 13) && (q.player.pokedex.caught_count >= 650) ? {
+    q.run_command('give ' + q.player.username + ' cobblemon:master_ball');
+    q.run_command('give ' + q.player.username + ' cobblemon:cherish_ball 8');
+    q.player.data.pokedex_rewards_received = 13;
+    q.player.save_data();
+    return 1;
+};
+
+(q.player.data.pokedex_rewards_received < 14) && (q.player.pokedex.caught_count >= 698) ? {
+    q.run_command('givepokemonegg ' + q.player.username + ' ' + v.paradox_choice);
+    q.run_command('playsound advancementplaques:ui.toast.goal_complete master @a ~ ~ ~ 0.3 1 1');
+    q.run_command('tellraw @a ["",{"text":"' + q.player.username + '","bold":true,"color":"aqua"},{"text":" has caught ","bold":true,"color":"light_purple"},{"text":"' + q.player.pokedex.caught_count + '","bold":true,"color":"yellow"},{"text":" Pokemon and has completed the Pokedex!","bold":true,"color":"light_purple"}]');
+    q.player.data.pokedex_rewards_received = 14;
+    q.player.save_data();
+    return 1;
+};

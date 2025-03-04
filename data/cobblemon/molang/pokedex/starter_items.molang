@@ -1,0 +1,16 @@
+q.run_command('give ' + q.player.username + ' minecraft:iron_sword[enchantments={levels:{sharpness:2,unbreaking:1}}]');
+q.run_command('give ' + q.player.username + ' minecraft:iron_pickaxe[enchantments={levels:{efficiency:2,fortune:1,unbreaking:1}}]');
+q.run_command('give ' + q.player.username + ' minecraft:iron_axe[enchantments={levels:{efficiency:2,unbreaking:1}}]');
+q.run_command('give ' + q.player.username + ' minecraft:iron_shovel[enchantments={levels:{efficiency:2,unbreaking:1}}]');
+q.run_command('give ' + q.player.username + ' minecraft:iron_hoe[enchantments={levels:{unbreaking:1,fortune:1}}]');
+q.run_command('give ' + q.player.username + ' golden_hoe[item_name=\'"Land Claimer"\',lore=[\'"Right-click two opposite corners to create a rectangular claim!"\']]');
+q.run_command('give ' + q.player.username + ' minecraft:golden_helmet[enchantments={levels:{protection:2,unbreaking:1,mending:1}}]');
+q.run_command('give ' + q.player.username + ' minecraft:iron_chestplate[enchantments={levels:{protection:2,unbreaking:1}}]');
+q.run_command('give ' + q.player.username + ' minecraft:iron_leggings[enchantments={levels:{protection:2,unbreaking:1}}]');
+q.run_command('give ' + q.player.username + ' minecraft:iron_boots[enchantments={levels:{protection:2,unbreaking:1}}]');
+q.run_command('give ' + q.player.username + ' sophisticatedbackpacks:iron_backpack');
+q.run_command('give ' + q.player.username + ' cobblemon:braised_vivichoke 16');
+q.run_command('give ' + q.player.username + ' cobblemon:great_ball 4');
+q.run_command('give ' + q.player.username + ' cobblemon:poke_ball 16');
+q.player.data.starter_items_given = true;
+q.player.save_data();
