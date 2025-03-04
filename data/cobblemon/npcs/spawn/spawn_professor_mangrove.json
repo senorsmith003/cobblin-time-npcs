@@ -1,0 +1,13 @@
+{
+    "presets": [
+        "cobblemon:base_npc"
+    ],
+    "resourceIdenfitier": "cobblemon:professor_mangrove",
+    "names": [
+        "Prof. Mangrove"
+    ],
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:professor_mangrove"
+    }
+}

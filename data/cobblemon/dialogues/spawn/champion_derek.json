@@ -6,21 +6,16 @@
                 "expression": "q.npc.name"
             },
             "face": "q.npc.face();"
-        },
-        "player": {
-            "face": "q.player.face();",
-            "name": {
-                "type": "expression",
-                "expression": "q.player.username"
-            }
         }
     },
     "pages": [
         {
             "id": "greeting",
             "speaker": "npc",
-            "lines": ["Aha! A trainer! I am champion derek, rule of It's Cobblin' Time for 500 years!"],
-            "input": "q.dialogue.set_page('battle_prompt');"
+            "lines": [
+                "Aha! A trainer! I am champion derek, ruler of It's Cobblin' Time for 500 years!"
+            ],
+            "input": "(q.player.data.psychic_fairy_gym_defeated > 0 && q.player.data.grass_bug_gym_defeated > 0 && q.player.party.highest_level >= 85) ? q.dialogue.set_page('battle_prompt') : q.dialogue.set_page('get_good');"
         },
         {
             "id": "battle_prompt",
@@ -48,11 +43,20 @@
         {
             "id": "battle_start",
             "speaker": "npc",
-            "lines": ["That's what I like to see! Now, show me what you got, Trainer!"],
+            "lines": [
+                "That's what I like to see! Now, show me what you got, Trainer!"
+            ],
             "escapeAction": "0",
             "input": [
                 "q.dialogue.close();",
                 "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "get_good",
+            "speaker": "npc",
+            "lines": [
+                "You aren't quite ready for me yet. Come back when you're a real trainer."
             ]
         }
     ]

@@ -1,0 +1,14 @@
+{
+    "resourceIdentifier": "cobblemon:nurse_bliss",
+    "presets": [
+      "cobblemon:base_npc",
+      "cobblemon:looks_in_one_direction"
+    ],
+    "names": [
+      "§d§lNurse Bliss§r"
+    ],
+    "interaction": {
+      "type": "dialogue",
+      "dialogue": "cobblemon:nurse"
+    }
+  }
