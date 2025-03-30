@@ -1,0 +1,14 @@
+q.player.data.draconic_gym_defeated = q.player.data.draconic_gym_defeated + 1;
+q.player.save_data();
+
+(q.player.data.draconic_gym_defeated > 1) ? {
+    q.run_command('tellraw @a ["",{"text":"' + q.player.username + '  has just defeated "},{"text":"Castle Lord Drakeula","color":"cyan"},{"text":"\'s tough rematch team! They\'ve beaten this gym ' + q.player.data.draconic_gym_defeated + ' times. Way to go!"}]');
+    return 1;
+} : {
+    q.player.tell(q.npc.name + ': Not only for your battle prowess, but for your bravery and mettle, you have earned the Legend Badge!');
+    q.run_command('give ' + q.player.username + ' cobblemonpokemonbadges:legend_badge[lore=[\'["",{"text":"Given to ","italic":false}, {"text":"' + q.player.username + '","italic":false,"color":"white"},{"text":" for beating ","italic":false},{"text":"Castle Lord Drakeula","italic":false,"color":"dark_aqua"},{"text":"!","italic":false,"color":"white"}]\']]');
+    return 1;
+};
+q.run_command('setblock -3514 156 3547 copper_bulb[lit=true]');
+q.run_command('summon minecraft:item -3524 155 3542 {Item:{components:{"minecraft:custom_name":\'{text:"' + q.player.username + '",color:"dark_aqua"}\'},id:"minecraft:paper",count:1}}');
+return 0;

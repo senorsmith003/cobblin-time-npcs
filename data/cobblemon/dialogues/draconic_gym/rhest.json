@@ -1,0 +1,102 @@
+{
+    "initializationAction": [
+        "q.player.get_npc_variable(q.npc, 'npc_defeated', false) ? q.dialogue.set_page('post_defeat');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        }
+    },
+    "pages": [
+        {
+            "id": "page1",
+            "speaker": "npc",
+            "lines": [
+                "Hmm....yes yes....oh?"
+            ],
+            "input": [
+                "q.run_command('setblock 72 64 44 minecraft:copper_bulb[lit=false]');",
+                "q.dialogue.next_page();"
+            ]
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Sorry, I'm busy going over some notes right now"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Battle me!",
+                        "value": "yes",
+                        "action": [
+                            "(q.player.data.draconic_gym_progress < 1) ? q.dialogue.set_page('comeback') : q.dialogue.set_page('page3');"
+                        ]
+                    },
+                    {
+                        "text": "Sorry, bye",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('okbye');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "oh, you're here to to face Drakeula? Guess you'll have to face me, Rhest, and my fossil pokemon"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "Hmmm...I see...I'll have to inform my niece, Cara...."
+            ],
+            "input": [
+                "q.run_command('setblock -3528 124 3526 minecraft:copper_bulb[lit=false]');",
+                "q.dialogue.set_page('post_defeat2');"
+            ]
+        },
+        {
+            "id": "post_defeat2",
+            "speaker": "npc",
+            "lines": [ "Oh?! You need to go up? I'll turn it on so hurry up and go please, I'm approaching a breakthrough!" ],
+            "input": [
+                "q.run_command('setblock -3526 139 3537 minecraft:copper_bulb[lit=false]');",
+                "q.dialogue.close();"
+            ]
+        },
+        {
+            "id": "comeback",
+            "speaker": "npc",
+            "lines": [ "Battle? You shouldn't even be here if you haven't defeated Ramona!" ],
+            "input": [ "q.dialogue.set_page('comeback2');" ]
+        },
+        {
+            "id": "comeback2",
+            "speaker": "npc",
+            "lines": [ "Come back when you are given the right to enter here properly." ],
+            "input": [ "q.dialogue.close();" ]
+        },
+        {
+            "id": "okbye",
+            "speaker": "npc",
+            "lines": [ "Now, where was I...." ],
+            "input": [ "q.dialogue.close();" ]
+        }
+    ]
+}

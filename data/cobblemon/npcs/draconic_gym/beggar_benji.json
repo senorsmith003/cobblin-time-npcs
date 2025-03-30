@@ -1,0 +1,13 @@
+{
+  "resourceIdentifier": "cobblemon:beggar_benji",
+  "presets": [
+    "cobblemon:base_npc"
+  ],
+  "names": [
+    "Beggar Benji"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:beggar_benji"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "resourceIdentifier": "cobblemon:reptile_romancer_ramona",
+  "names": [
+    "§lReptile Romancer Ramona§r"
+  ],
+  "presets": [
+    "cobblemon:base_npc",
+    "cobblemon:battle_npc",
+    "cobblemon:one_off_battle_npc"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:ramona"
+  },
+  "config": [
+    {
+      "variableName": "battle_start_message",
+      "displayName": "Battle Start Message",
+      "description": "Message displayed when the player starts a battle.",
+      "type": "TEXT",
+      "defaultValue": "Go, my cuties!"
+    },
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.run_script('cobblemon:ramona_defeated')"
+    },
+    {
+      "variableName": "post_defeat_message",
+      "displayName": "Defeat Message",
+      "description": "Message displayed when the NPC is defeated.",
+      "type": "TEXT",
+      "defaultValue": "Looks like I'll need to give my cuties some TLC after this...'"
+    }
+  ],
+  "skill": 5,
+  "party": {
+    "type": "simple",
+    "isStatic": true,
+    "pokemon": [
+      "salazzle uncatchable=true held_item=cobblemon:focus_sash ability=corrosion level=60 hp_ev=4 attack_ev=0 defence_ev=0 special_attack_ev=252 special_defence_ev=0 speed_ev=252 nature=timid hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=endeavor,toxic,dragonpulse,acidspray",
+      "dragalge uncatchable=true held_item=cobblemon:black_sludge ability=adaptability level=60 hp_ev=252 attack_ev=0 defence_ev=142 special_attack_ev=4 special_defence_ev=110 speed_ev=0 nature=modest hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=shadowball,dragonpulse,focusblast,rest",
+      "flygon uncatchable=true held_item=cobblemon:assault_vest ability=levitate level=62 hp_ev=4 attack_ev=252 defence_ev=0 special_attack_ev=0 special_defence_ev=0 speed_ev=252 nature=timid hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=superpower,alluringvoice,dragonpulse,earthquake"
+    ]
+  }
+}

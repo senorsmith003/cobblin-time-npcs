@@ -1,0 +1,110 @@
+﻿{
+    "initializationAction": [
+        "q.npc.is_doing_activity('cobblemon:battling') ? q.dialogue.close();",
+        "q.player.data.draconic_gym_defeated ? q.dialogue.set_page('post_defeat');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Welcome, I am the lord of this castle, and the leader of this draconic gym. I have been given the name Drakeula."
+            ],
+            "input": [
+                "q.run_command('setblock -3514 156 -3554 minecraft:copper_bulb[lit=false]');",
+                "(q.player.data.draconic_gym_progress < 3) ? q.dialogue.set_page('comeback') : q.dialogue.set_page('trainers_defeated');"
+            ]
+        },
+        {
+            "id": "comeback",
+            "speaker": "npc",
+            "lines": [
+                "I am not sure how a rat squeezed its way in here, but you have clearly not passed the trials set for this challenge."
+            ],
+            "input": [ "q.run_command('setblock -3514 156 3547 minecraft:copper_bulb[lit=true]');", "q.dialogue.next_page();" ]
+        },
+        {
+            "id": "comeback2",
+            "speaker": "npc",
+            "lines": [
+                "Return after you have defeated all my disciples, Ramona, Rhest, and Jett. Only then will I humor you."
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "trainers_defeated",
+            "speaker": "npc",
+            "lines": [
+                "It would appear you have gone through the trials. I shall give you credit for that. Now..."
+            ],
+            "input": "q.dialogue.set_page('battle_prompt');"
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "Are you prepared to face me in battle?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "action": "q.dialogue.set_page('battle_start');"
+                    },
+                    {
+                        "text": "No, I should go..",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('exit');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "exit",
+            "speaker": "npc",
+            "lines": [
+                "Very well, return when you feel you are prepared..."
+            ],
+            "input": [ "q.run_command('setblock -3514 156 3547 minecraft:copper_bulb[lit=true]');", "q.dialogue.close();" ]
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "Very well, let us begin the final trial!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "A familiar face...perhaps I should raise the bar a little more"
+            ],
+            "input": "q.dialogue.set_page('battle_prompt');"
+        }
+    ]
+}

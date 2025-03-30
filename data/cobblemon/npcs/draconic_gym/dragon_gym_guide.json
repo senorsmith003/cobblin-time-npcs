@@ -1,0 +1,13 @@
+{
+  "resourceIdentifier": "cobblemon:gym_guide",
+  "names": [
+    "§lDraconic Gym Guide§r"
+  ],
+  "presets": [
+    "cobblemon:base_npc"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:dragon_gym_guide"
+  }
+}

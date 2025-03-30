@@ -1,0 +1,15 @@
+{
+  "name": "cobblemon:jet_stream_jett",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:jett",
+      "model": "cobblemon:jett.geo",
+      "texture": "cobblemon:textures/npcs/jett/jett.png",
+      "layers": [
+        
+      ]
+    }
+  ]
+}

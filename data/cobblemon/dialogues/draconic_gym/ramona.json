@@ -1,0 +1,57 @@
+{
+    "initializationAction": [
+        "q.player.get_npc_variable(q.npc, 'npc_defeated', false) ? q.dialogue.set_page('post_defeat');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        }
+    },
+    "pages": [
+        {
+            "id": "page1",
+            "speaker": "npc",
+            "lines": [
+                "Why, hello there~"
+            ],
+          "input": [
+            "q.dialogue.next_page();"
+          ]
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "My name is Ramona, and I love me a good lizard~!"
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "I'm first on the list for you to get to Drakeula. Prepare to battle!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "Hi again! Did you need to go inside? I'll unlock the door."
+            ],
+            "input": [
+                "q.run_command('setblock 72 64 44 minecraft:copper_bulb[lit=true]');",
+                "q.dialogue.close();"
+            ]
+        }
+    ]
+}

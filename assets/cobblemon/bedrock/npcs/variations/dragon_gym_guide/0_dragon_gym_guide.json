@@ -1,0 +1,14 @@
+{
+  "name": "cobblemon:gym_guide",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:dragon_gym_guide",
+      "model": "cobblemon:dragon_gym_guide.geo",
+      "texture": "cobblemon:textures/npcs/dragon_gym_guide/gym_guide.png",
+        "layers": [
+        ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "resourceIdentifier": "cobblemon:ancient_addict_rhest_liss",
+  "names": [
+    "§lAncient Addict Rhest Liss§r"
+  ],
+  "presets": [
+    "cobblemon:base_npc",
+    "cobblemon:battle_npc",
+    "cobblemon:one_off_battle_npc"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:rhest"
+  },
+  "config": [
+    {
+      "variableName": "battle_start_message",
+      "displayName": "Battle Start Message",
+      "description": "Message displayed when the player starts a battle.",
+      "type": "TEXT",
+      "defaultValue": "Time to for more research!!"
+    },
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.run_script('cobblemon:rhest_defeated')"
+    },
+    {
+      "variableName": "post_defeat_message",
+      "displayName": "Defeat Message",
+      "description": "Message displayed when the NPC is defeated.",
+      "type": "TEXT",
+      "defaultValue": "I will have to go over these notes later..."
+    }
+  ],
+  "skill": 5,
+  "party": {
+    "type": "simple",
+    "isStatic": true,
+    "pokemon": [
+      "ampharos uncatchable=true held_item=cobblemon:air_balloon ability=static level=62 hp_ev=252 attack_ev=0 defence_ev=130 special_attack_ev=0 special_defence_ev=126 speed_ev=0 nature=modest hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=voltswitch,thunderwave,dragonpulse,thunder",
+      "dracozolt uncatchable=true held_item=cobblemon:quick_claw ability=hustle level=62 hp_ev=4 attack_ev=252 defence_ev=0 special_attack_ev=0 special_defence_ev=0 speed_ev=252 nature=modest hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=boltbeak,dragonrush,bulldoze,rocktomb",
+      "dracovish uncatchable=true held_item=cobblemon:choice_scarf ability=hustle level=64 hp_ev=4 attack_ev=252 defence_ev=142 special_attack_ev=0 special_defence_ev=0 speed_ev=252 nature=modest hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=fishiousrend,psychicfangs,ironhead,outrage",
+      "tyrantrum uncatchable=true held_item=cobblemon:assault_vest ability=rockhead level=64 hp_ev=96 attack_ev=252 defence_ev= special_attack_ev=0 special_defence_ev=160 speed_ev=0 nature=timid hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=headsmash,firefang,ironhead,outrage"
+    ]
+  }
+}

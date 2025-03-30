@@ -1,0 +1,50 @@
+{
+  "resourceIdentifier": "cobblemon:jet_stream_jett",
+  "names": [
+    "§lJet Stream Jett§r"
+  ],
+  "presets": [
+    "cobblemon:base_npc",
+    "cobblemon:battle_npc",
+    "cobblemon:one_off_battle_npc"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:draconic_gym_jett"
+  },
+  "config": [
+    {
+      "variableName": "battle_start_message",
+      "displayName": "Battle Start Message",
+      "description": "Message displayed when the player starts a battle.",
+      "type": "TEXT",
+      "defaultValue": "Let's get this battle started, AWOOOOOOH!"
+    },
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.run_script('cobblemon:jett_defeated')"
+    },
+    {
+      "variableName": "post_defeat_message",
+      "displayName": "Defeat Message",
+      "description": "Message displayed when the NPC is defeated.",
+      "type": "TEXT",
+      "defaultValue": "Great battle! That was intense! Now, onward TO GLORYYYY!"
+    }
+  ],
+  "skill": 5,
+  "party": {
+    "type": "simple",
+    "isStatic": true,
+    "pokemon": [
+      "gyarados uncatchable=true held_item=cobblemon:lum_berry ability=intimidate level=64 hp_ev=4 attack_ev=252 defence_ev=0 special_attack_ev=0 special_defence_ev=0 speed_ev=252 nature=adamant hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=dragondance,waterfall,earthquake,icefang",
+      "sceptile uncatchable=true held_item=cobblemon:grass_gem ability=unburden level=64 hp_ev=4 attack_ev=252 defence_ev=0 special_attack_ev=0 special_defence_ev=0 speed_ev=252 nature=jolly hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=sworddance,acrobatics,leafblade,rocktomb",
+      "charizard uncatchable=true held_item=cobblemon:zoom_lens ability=blaze level=64 hp_ev=4 attack_ev=0 defence_ev=0 special_attack_ev=252 special_defence_ev=0 speed_ev=252 nature=timid hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=hurricane,airslash,fireblast,focusblast",
+      "scrafty uncatchable=true held_item=cobblemon:leftovers ability=intimidate level=66 hp_ev=4 attack_ev=252 defence_ev=0 special_attack_ev=0 special_defence_ev=0 speed_ev=252 nature=adamant hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=dragondance,highjumpkick,crunch,ironhead",
+      "dragonite uncatchable=true held_item=cobblemon:lum_berry ability=multiscale level=66 hp_ev=4 attack_ev=252 defence_ev=0 special_attack_ev=0 special_defence_ev=0 speed_ev=252 nature=adamant hp=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=dragondance,thunderpunch,outrage,extremespeed"
+    ]
+  }
+}

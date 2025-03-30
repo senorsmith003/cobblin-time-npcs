@@ -1,0 +1,50 @@
+{
+  "resourceIdentifier": "cobblemon:drakeula",
+  "names": [
+    "§lCastle Lord, Drakeula§r"
+  ],
+  "presets": [
+    "cobblemon:base_npc",
+    "cobblemon:battle_npc"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:castle_lord_drakeula"
+  },
+  "config": [
+    {
+      "variableName": "battle_start_message",
+      "displayName": "Battle Start Message",
+      "description": "Message displayed when the player starts a battle.",
+      "type": "TEXT",
+      "defaultValue": "Are you worthy of this badge..?"
+    },
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.run_script('cobblemon:draconic_gym_defeated')"
+    },
+    {
+      "variableName": "post_defeat_message",
+      "displayName": "Defeat Message",
+      "description": "Message displayed when the NPC is defeated.",
+      "type": "TEXT",
+      "defaultValue": "A fine battle!"
+    },
+    {
+      "variableName": "on_player_loses",
+      "displayName": "npc.variable.on_player_loses.name",
+      "description": "npc.variable.on_player_loses.desc",
+      "type": "TEXT",
+      "defaultValue": "q.run_command('setblock 72 64 44 minecraft:copper_bulb[lit=true]');"
+    }
+  ],
+  "skill": 5,
+  "party": {
+    "type": "script",
+    "script": "cobblemon:castle_lord_drakeula_team",
+    "isStatic": false
+  }
+}

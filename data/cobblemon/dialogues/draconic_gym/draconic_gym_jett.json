@@ -1,0 +1,72 @@
+{
+    "initializationAction": [
+        "q.player.get_npc_variable(q.npc, 'npc_defeated', false) ? q.dialogue.set_page('post_defeat');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        }
+    },
+    "pages": [
+        {
+            "id": "page1",
+            "speaker": "npc",
+            "lines": [
+                "WELCOME TO THE WALL OF FLAAAAAMES!!!"
+            ],
+          "input": [
+            "q.run_command('setblock -3526 139 3537 minecraft:copper_bulb[lit=true]');",
+            "q.dialogue.next_page();"
+          ]
+        },
+      {
+        "id": "page2",
+        "speaker": "npc",
+        "lines": [
+          "Im Jet Stream Jett, I'm all about speed and danger!"
+        ],
+        "input": "(q.player.data.draconic_gym_progress < 2) ? q.dialogue.set_page('comeback') : q.dialogue.set_page('page3');"
+      },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Enough about me! If you wanna get past here and fight Drakeula, you'll have to fight me first! Ready? Go!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        },
+      {
+        "id": "post_defeat",
+        "speaker": "npc",
+        "lines": [
+          "Ready to battle again?!?! No?....Oh, you need to get through? Ok, I'll open the way up. Good luck!"
+        ],
+        "input": [
+          "q.run_command('setblock -3526 139 3537 minecraft:copper_bulb[lit=true]');",
+          "q.run_command('setblock -3536 146 3554 minecraft:copper_bulb[lit=true]');",
+          "q.dialogue.close();"
+        ]
+      },
+      {
+        "id": "comeback",
+        "speaker": "npc",
+        "lines": [ "Hey, you messin' with me?! You havent beat the others yet!" ],
+        "input": [ "q.dialogue.next_page();" ]
+      },
+      {
+        "id": "comeback2",
+        "speaker": "npc",
+        "lines": [ "Come back after you've properly beaten Ramona and Rhest!" ],
+        "input": [ "q.dialogue.close();" ]
+      }
+
+    ]
+}

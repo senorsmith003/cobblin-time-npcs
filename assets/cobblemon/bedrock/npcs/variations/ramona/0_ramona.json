@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:reptile_romancer_ramona",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:ramona",
+      "model": "cobblemon:ramona.geo",
+      "texture": "cobblemon:textures/npcs/ramona/ramona.png",
+      "layers": []
+    }
+  ]
+}

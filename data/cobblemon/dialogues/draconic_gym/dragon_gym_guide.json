@@ -1,0 +1,85 @@
+{
+    "initializationAction": [
+        "(q.player.data.dragon_gym_defeated > 0) ? q.dialogue.set_page('post_defeat');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        }
+    },
+    "pages": [
+        {
+            "id": "page1",
+            "speaker": "npc",
+            "lines": [
+                "Hey there champ-to-be! Welcome to the draconic gym."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "This gym doesn't restrain itself to the idea of typings. If it has draconic blood in it, it's fair game!"
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "To challenge the Leader Drakeula, you have to travel through the castle and challenge his draconic trainers to open the way to the next area."
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "If you're looking for a fair fight, your pokemon should be between level 60-69 for this gym."                
+            ],
+            "input": "q.dialogue.next_page();"
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "That being said, you can re-challenge Leader Drakeula as much as you want after you beat him once, and he'll have a much more challenging team suitable for any player."
+            ],
+            "input": "q.player.data.dragon_gym_item_given ? q.dialogue.set_page('page6') : q.dialogue.set_page('helpful_item');"
+        },
+        {
+            "id": "helpful_item",
+            "speaker": "npc",
+            "lines": [
+                "The pokemon here can hit you with a variety of powerful moves. The best defense is a strong offense, this might help."
+            ],
+            "input": [
+                "q.run_command('give ' + q.player.username + ' cobblemon:choice_scarf');",
+                "q.player.data.dragon_gym_item_given = true;",
+                "q.player.save_data();",
+                "q.dialogue.next_page();"
+            ]
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "Good luck trainer!"
+            ],
+            "input": "q.dialogue.close();"
+        },
+        {
+            "id": "post_defeat",
+            "speaker": "npc",
+            "lines": [
+                "Wow, you did it! You are good! Don't forget, you can rechallenge his more formidable team at any time."
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}
