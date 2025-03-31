@@ -1,7 +1,7 @@
 ﻿{
     "initializationAction": [
         "q.npc.is_doing_activity('cobblemon:battling') ? q.dialogue.close();",
-        "q.player.data.draconic_gym_defeated ? q.dialogue.set_page('post_defeat');"
+        "(q.player.data.draconic_gym_defeated > 0) ? q.dialogue.set_page('post_defeat');"
     ],
     "speakers": {
         "npc": {
