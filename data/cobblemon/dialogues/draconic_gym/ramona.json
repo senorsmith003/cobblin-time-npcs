@@ -49,7 +49,7 @@
                 "Hi again! Did you need to go inside? I'll unlock the door."
             ],
             "input": [
-                "q.run_command('setblock 72 64 44 minecraft:copper_bulb[lit=true]');",
+                "q.run_command('setblock -3528 124 3526 minecraft:copper_bulb[lit=true]');",
                 "q.dialogue.close();"
             ]
         }
