@@ -4,10 +4,8 @@
   "profileScale": 1.0,
   "profileTranslation": [0.0, -0.5, 0.0],
   "animations": {
-    "send_out": "q.bedrock_primary('drakeula', 'battle_intro', q.curve('symmetrical'), q.exclude_labels('look'))",
-    "recall": "q.bedrock_primary('drakeula', 'battle_intro', q.curve('symmetrical_wide'), q.exclude_labels('look'))",
-    "win": "q.bedrock_primary('drakeula', 'win', q.curve('symmetrical_wide'))",
-    "lose": "q.bedrock_primary('drakeula', 'lose', q.curve('symmetrical_wide'))"
+    "send_out": "q.bedrock_primary('drakeula', 'battle_start', q.curve('symmetrical'), q.exclude_labels('look'))",
+    "recall": "q.bedrock_primary('drakeula', 'battle_start', q.curve('symmetrical_wide'), q.exclude_labels('look'))"
   },
   "poses": {
     "battle-standing": {

@@ -4,8 +4,6 @@
   "profileScale": 1.0,
   "profileTranslation": [0.0, -0.5, 0.0],
   "animations": {
-    "win": "q.bedrock_primary('jett', 'win', q.curve('symmetrical_wide'))",
-    "lose": "q.bedrock_primary('jett', 'lose', q.curve('symmetrical_wide'))",
     "send_out": "q.bedrock_primary('jett', 'battle_start', q.curve('symmetrical'), q.exclude_labels('look'))",
     "recall": "q.bedrock_primary('jett', 'battle_start', q.curve('symmetrical_wide'), q.exclude_labels('look'))"
   },
