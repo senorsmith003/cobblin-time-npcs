@@ -1,0 +1,65 @@
+{
+  "resourceIdentifier": "cobblemon:galactic_f",
+  "baseScale": 1,
+  "hitbox": "player",
+  "presets": [
+    "cobbletrainers:trainer_base",
+    "cobbletrainers:wanders_fast",
+    "cobbletrainers:looks_around",
+    "cobbletrainers:challenges_player",
+    "cobblemon:defeat_galactic"
+  ],
+  "variation": {
+    "net": {
+      "type": "weighted",
+      "options": [
+        {
+          "aspect": "",
+          "weight": 10
+        },
+        {
+          "aspect": "2",
+          "weight": 10
+        },
+        {
+          "aspect": "3",
+          "weight": 10
+        },
+        {
+          "aspect": "4",
+          "weight": 10
+        },
+        {
+          "aspect": "5",
+          "weight": 10
+        }
+      ]
+    }
+  },
+  "config": [
+    {
+      "variableName": "post_defeat_message",
+      "displayName": "Defeat Message",
+      "description": "Message displayed when the NPC is defeated.",
+      "type": "TEXT",
+      "defaultValue": "Not standing up to the mighty is foolish, you say..."
+    },
+    {
+      "variableName": "challenge_cooldown",
+      "displayName": "Cooldown",
+      "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
+      "type": "NUMBER",
+      "defaultValue": "20"
+    }
+  ],
+  "names": [
+    "Team Galactic Grunt"
+  ],
+  "autoHealParty": false,
+  "skill": 3,
+  "party": {
+    "type": "script",
+    "script": "cobblemon:galactic_party",
+    "isStatic": false
+  }
+}

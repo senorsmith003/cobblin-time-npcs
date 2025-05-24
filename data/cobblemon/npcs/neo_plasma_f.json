@@ -1,0 +1,76 @@
+{
+  "resourceIdentifier": "cobblemon:neo_plasma_f",
+  "baseScale": 1,
+  "hitbox": "player",
+  "presets": [
+    "cobbletrainers:trainer_base",
+    "cobbletrainers:wanders_fast",
+    "cobbletrainers:looks_around",
+    "cobbletrainers:challenges_player",
+    "cobblemon:defeat_neo_plasma"
+  ],
+  "variation": {
+    "net": {
+      "type": "weighted",
+      "options": [
+        {
+          "aspect": "",
+          "weight": 10
+        },
+        {
+          "aspect": "2",
+          "weight": 10
+        },
+        {
+          "aspect": "3",
+          "weight": 10
+        },
+        {
+          "aspect": "4",
+          "weight": 10
+        },
+        {
+          "aspect": "5",
+          "weight": 10
+        }
+      ]
+    }
+  },
+  "config": [
+    {
+      "variableName": "post_defeat_message",
+      "displayName": "Defeat Message",
+      "description": "Message displayed when the NPC is defeated.",
+      "type": "TEXT",
+      "defaultValue": "Grr...Just wait till we complete our mission!"
+    },
+    {
+      "variableName": "challenge_cooldown",
+      "displayName": "Cooldown",
+      "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
+      "type": "NUMBER",
+      "defaultValue": "20"
+    },
+    {
+      "variableName": "can_rechallenge",
+      "displayName": "Rechallenging",
+      "description": "This NPC can be battled multiple times.",
+      "type": "BOOLEAN",
+      "defaultValue": true
+    }
+  ],
+  "names": [
+    "Neo Team Plasma Grunt"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:npc-youngster"
+  },
+  "autoHealParty": false,
+  "skill": 3,
+  "party": {
+    "type": "script",
+    "script": "cobblemon:neo_plasma_party",
+    "isStatic": false
+  }
+}
