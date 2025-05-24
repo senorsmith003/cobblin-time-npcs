@@ -1,0 +1,11 @@
+{
+    "config": [
+        {
+            "variableName": "on_player_wins",
+            "displayName": "npc.variable.on_player_wins.name",
+            "description": "npc.variable.on_player_wins.desc",
+            "type": "TEXT",
+            "defaultValue": "q.player.tell(q.npc.name + ': ' + q.npc.config.post_defeat_message); q.player.data.electric_gym_progress = q.player.data.electric_gym_progress + 1; q.player.save_data();"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "config": [
+      {
+        "variableName": "on_player_wins",
+        "displayName": "npc.variable.on_player_wins.name",
+        "description": "npc.variable.on_player_wins.desc",
+        "type": "TEXT",
+        "defaultValue": "q.player.data.defeat_rocket = q.player.data.defeat_rocket + 1; q.player.save_data(); q.run_script('rocket_loot'); q.run_command('execute as ' + q.npc.uuid + ' at @s run tp ~ ~-1000 ~')"
+      }
+    ]
+}
