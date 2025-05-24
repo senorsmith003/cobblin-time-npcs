@@ -1,0 +1,1 @@
+execute at @s run loot spawn ^ ^ ^4 loot cobblemon:sets/t7_grunt
