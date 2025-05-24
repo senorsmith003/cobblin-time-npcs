@@ -1,0 +1,31 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "npc": "rocket_f",
+      "id": "rf-1",
+      "presets": [],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "common",
+      "weight": 40,
+      "weightMultiplier": {
+        "multiplier": 1.5,
+        "condition": {
+          "timeRange": "night"
+        }
+      },
+      "condition": {
+        "biomes": [
+          "#cobblemon:is_savanna",
+          "#cobblemon:is_plains"
+        ],
+        "structures": [
+          "#minecraft:village"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "npc": "plasma_f",
+      "id": "plf-1",
+      "presets": [ "natural" ],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "uncommon",
+      "weight": 2,
+      "weightMultiplier": {
+        "multiplier": 5,
+        "condition": {
+          "timeRange": "night"
+        }
+      },
+      "condition": {
+        "biomes": [
+          "#cobblemon:is_forest",
+          "#cobblemon:is_taiga"
+        ],
+        "structures": [
+          "#minecraft:village"
+        ]
+      }
+    }
+  ]
+}

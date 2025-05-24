@@ -1,0 +1,12 @@
+{
+  "displayName": "Test",
+  "enabled": "true",
+  "components": [
+    {
+      "type": "filter",
+      "spawnSelector": "v.spawn.id == 'npm-1'",
+      "contextSelector": "v.context.player.data.defeat_plasma >= 50 ",
+      "allow": true
+    }
+  ]
+}

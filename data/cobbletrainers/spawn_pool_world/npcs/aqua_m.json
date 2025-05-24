@@ -1,0 +1,54 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "npc": "aqua_m",
+      "id": "aqm-1",
+      "presets": [ "natural" ],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "common",
+      "weight": 2,
+      "weightMultiplier": {
+        "multiplier": 5,
+        "condition": {
+          "timeRange": "night"
+        }
+      },
+      "condition": {
+        "biomes": [
+          "#cobblemon:is_coast",
+          "#cobblemon:is_river",
+          "minecraft:beach"
+        ]
+      }
+    },
+    {
+      "npc": "aqua_m",
+      "id": "aqm-2",
+      "presets": [ "natural" ],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "common",
+      "weight": 10,
+      "weightMultiplier": {
+        "multiplier": 4,
+        "condition": {
+          "neededNearbyBlocks": [
+            "#minecraft:water"
+          ]
+
+        }
+      },
+      "condition": {
+        "biomes": [
+          "#cobblemon:is_coast",
+          "#cobblemon:is_river",
+          "minecraft:beach"
+        ]
+      }
+    }
+  ]
+}

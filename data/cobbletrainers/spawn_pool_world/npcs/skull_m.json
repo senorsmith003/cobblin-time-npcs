@@ -1,0 +1,71 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "npc": "skull_m",
+      "id": "npc-1",
+      "presets": [ "natural" ],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "uncommon",
+      "weight": 5,
+      "weightMultiplier": {
+        "multiplier": 4,
+        "condition": {
+          "timeRange": "night"
+        }
+      },
+      "condition": {
+        "biomes": [
+          "terralith:tropical_jungle"
+        ]
+      }
+    },
+    {
+      "npc": "skull_m",
+      "id": "sm-1",
+      "presets": [ "natural" ],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "uncommon",
+      "weight": 5,
+      "weightMultiplier": {
+        "multiplier": 4,
+        "condition": {
+          "timeRange": "night"
+        }
+      },
+      "condition": {
+        "biomes": [
+          "#cobblemon:is_jungle"
+        ]
+      }
+    },
+    {
+      "npc": "skull_m",
+      "id": "sm-2",
+      "presets": [ "natural" ],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "uncommon",
+      "weight": 5,
+      "weightMultiplier": {
+        "multiplier": 2,
+        "condition": {
+          "timeRange": "night"
+        }
+      },
+      "condition": {
+        "biomes": [
+          "terralith:gravel_beach",
+          "minecraft:beach"
+        ]
+      }
+
+
+
+    }
+  ]
+}

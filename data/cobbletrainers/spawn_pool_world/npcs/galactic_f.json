@@ -1,0 +1,64 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "npc": "galactic_f",
+      "id": "galf-1",
+      "presets": [ "stronghold" ],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "common",
+      "weight": 30,
+      "condition": {
+        "biomes": [
+          "#cobblemon:is_overworld"
+        ]
+      },
+      "anticondition": {
+        "neededNearbyBlocks": ["minecraft:end_portal_frame"]
+      }
+    },
+    {
+      "npc": "galactic_f",
+      "id": "galf-2",
+      "presets": [],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "common",
+      "weight": 10.0,
+      "weightMultiplier": {
+        "multiplier": 3,
+        "condition": {
+          "timeRange": "night"
+        }
+      },
+      "condition": {
+        "biomes": [
+          "terralith:warped_mesa"
+        ]
+      }
+    },
+    {
+      "npc": "galactic_f",
+      "id": "galf-3",
+      "presets": [],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "common",
+      "weight": 5,
+      "weightMultiplier": {
+        "multiplier": 3,
+        "condition": {
+          "timeRange": "night"
+        }
+      },
+      "condition": {
+        "biomes": [
+          "#cobblemon:is_mountain"
+        ]
+      }
+    }
+  ]
+}

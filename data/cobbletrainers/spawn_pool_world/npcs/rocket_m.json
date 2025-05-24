@@ -1,0 +1,31 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "npc": "rocket_m",
+      "id": "rm-1",
+      "presets": [],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "common",
+      "weight": 2,
+      "weightMultiplier": {
+        "multiplier": 5,
+        "condition": {
+          "timeRange": "night"
+        }
+      },
+        "condition": {
+          "biomes": [
+            "#cobblemon:is_savanna",
+            "#cobblemon:is_plains"
+          ],
+          "structures": [
+            "#minecraft:village"
+          ]
+        }
+      }
+  ]
+}

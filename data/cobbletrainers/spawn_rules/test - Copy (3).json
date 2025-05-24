@@ -1,0 +1,12 @@
+{
+  "displayName": "Test2b",
+  "enabled": "true",
+  "components": [
+    {
+      "type": "filter",
+      "spawnSelector": "v.spawn.id == 'rrf-1'",
+      "contextSelector": "v.context.player.data.defeat_rocket >= 50 ",
+      "allow": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "enabled": false,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "npc": "r_rocket_f",
+      "id": "rrf-1",
+      "presets": ["natural"],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "common",
+      "weight": 10,
+      "condition": {
+        "biomes": [
+          "#cobblemon:is_end"
+        ]
+      }
+    }
+  ]
+}

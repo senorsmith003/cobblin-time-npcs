@@ -1,0 +1,76 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "npc": "magma_f",
+      "id": "maf-1",
+      "presets": [],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "common",
+      "weight": 5,
+      "weightMultiplier": {
+          "multiplier": 4,
+          "condition": {
+            "neededNearbyBlocks": [
+              "#minecraft:lava"
+            ]
+
+          }
+        },
+        "condition": {
+          "biomes": [
+            "#cobblemon:is_badlands"
+          ]
+        }
+    },
+    {
+      "npc": "magma_f",
+      "id": "maf-2",
+      "presets": [],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "common",
+      "weight": 5,
+      "weightMultiplier": {
+        "multiplier": 4,
+        "condition": {
+          "neededNearbyBlocks": [
+            "#minecraft:lava"
+          ]
+
+        }
+      },
+      "condition": {
+        "biomes": [
+          "#cobblemon:is_desert"
+        ]
+      }
+    },
+    {
+      "npc": "magma_f",
+      "id": "maf-3",
+      "presets": [],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "common",
+      "weight": 10,
+      "weightMultiplier": {
+        "multiplier": 4,
+        "condition": {
+          "neededNearbyBlocks": [
+            "#minecraft:lava"
+          ]
+
+        }
+      },
+      "condition": {
+        "biomes": [
+          "#cobblemon:is_volcanic"
+        ]
+      }
+    }
+  ]
+}

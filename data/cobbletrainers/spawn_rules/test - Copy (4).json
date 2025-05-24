@@ -1,0 +1,12 @@
+{
+  "displayName": "Test3b",
+  "enabled": "true",
+  "components": [
+    {
+      "type": "filter",
+      "spawnSelector": "v.spawn.id == 'af-1'",
+      "contextSelector": "v.context.player.data.defeat_skull >= 50 ",
+      "allow": true
+    }
+  ]
+}
