@@ -1,0 +1,7 @@
+v.player = q.player;
+v.npc = q.npc;
+((q.player.in_battle() == false) && !q.run_script('cobblemon:npc_battle_cooling_down') && q.player.party.has_usable_pokemon) ? {
+    q.npc.start_battle(q.player);
+    q.run_command('tellraw ' + q.player.username + ' "[' + q.npc.name + '] ' + q.npc.config.challenge_message + '"');
+};
+return 1;

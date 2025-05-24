@@ -1,0 +1,12 @@
+t.grunts_defeated = q.player.data.defeat_aqua;
+q.run_command('tellraw ' + q.player.username + ' "[' + q.npc.name + '] ' + q.npc.config.post_defeat_message + '"');
+q.player.save_data();
+t.grunts_defeated >= 150 ? {q.run_command('execute as ' + q.player.username + ' run function cobblemon:t1_grunt')};
+t.grunts_defeated >= 125 ? {q.run_command('execute as ' + q.player.username + ' run function cobblemon:t2_grunt')};
+t.grunts_defeated >= 100 ? {q.run_command('execute as ' + q.player.username + ' run function cobblemon:t3_grunt')};
+t.grunts_defeated >= 75 ? {q.run_command('execute as ' + q.player.username + ' run function cobblemon:t4_grunt')};
+t.grunts_defeated >= 50 ? {q.run_command('execute as ' + q.player.username + ' run function cobblemon:t5_grunt')};
+t.grunts_defeated >= 35 ? {q.run_command('execute as ' + q.player.username + ' run function cobblemon:t6_grunt')};
+t.grunts_defeated >= 20 ? {q.run_command('execute as ' + q.player.username + ' run function cobblemon:t7_grunt')};
+t.grunts_defeated >= 1 ? {q.run_command('execute as ' + q.player.username + ' run function cobblemon:t8_grunt')};
+return 1;

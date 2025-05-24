@@ -1,0 +1,72 @@
+t.grunts_defeated = (q.player.data.defeat_magma);
+(t.grunts_defeated >= 150) ? {
+    t.party_count = math.random_integer(3,5);
+    t.level_max = 64;
+    t.level_min = 53;
+} : ((t.grunts_defeated >= 125) ? {
+    t.party_count = math.random_integer(3,5);
+    t.level_max = 58;
+    t.level_min = 44;
+} : ((t.grunts_defeated >= 100) ? {
+    t.party_count = math.random_integer(2,5);
+    t.level_max = 49;
+    t.level_min = 36;
+} : ((t.grunts_defeated >= 75) ? {
+    t.party_count = math.random_integer(2,4);
+    t.level_max = 41;
+    t.level_min = 28;
+} : ((t.grunts_defeated >= 50) ? {
+    t.party_count = math.random_integer(2,3);
+    t.level_max = 34;
+    t.level_min = 21;
+} : ((t.grunts_defeated >= 35) ? {
+    t.party_count = math.random_integer(1,3);
+    t.level_max = 26;
+    t.level_min = 15;
+} : ((t.grunts_defeated >= 20) ? {
+    t.party_count = math.random_integer(1,3);
+    t.level_max = 20;
+    t.level_min = 10;
+} : ({
+    t.party_count = math.random_integer(1,2);
+    t.level_max = 15;
+    t.level_min = 6;
+})))))));
+loop(t.party_count, {
+    t.party_member = math.random_integer(1,10);
+    t.party_member_level = math.random_integer(t.level_min,t.level_max);
+    (t.party_member <= 2) ? {
+        (t.party_member_level >= 18) ? {
+            q.party.add_by_properties('mightyena uncatchable=true level=' + t.party_member_level + ' hp_iv=0 attack_iv=0 defence_iv=0 special_attack_iv=0 special_defence_iv=0 speed_iv=0');
+        } : {
+            q.party.add_by_properties('poochyena uncatchable=true level=' + t.party_member_level + ' hp_iv=0 attack_iv=0 defence_iv=0 special_attack_iv=0 special_defence_iv=0 speed_iv=0');
+        }
+    } : ((t.party_member == 3) || (t.party_member == 4)) ? {
+        (t.party_member_level >= 38) ? {
+            q.party.add_by_properties('crobat uncatchable=true level=' + t.party_member_level + ' hp_iv=0 attack_iv=0 defence_iv=0 special_attack_iv=0 special_defence_iv=0 speed_iv=0');
+        } : ((t.party_member_level >= 22) ? {
+            q.party.add_by_properties('golbat uncatchable=true level=' + t.party_member_level + ' hp_iv=0 attack_iv=0 defence_iv=0 special_attack_iv=0 special_defence_iv=0 speed_iv=0');
+        } : ({
+            q.party.add_by_properties('zubat uncatchable=true level=' + t.party_member_level + ' hp_iv=0 attack_iv=0 defence_iv=0 special_attack_iv=0 special_defence_iv=0 speed_iv=0');
+        }))
+    } : ((t.party_member == 5) || (t.party_member == 6)) ? {
+        (t.party_member_level >= 38) ? {
+            q.party.add_by_properties('weezing uncatchable=true level=' + t.party_member_level + ' hp_iv=0 attack_iv=0 defence_iv=0 special_attack_iv=0 special_defence_iv=0 speed_iv=0');
+        } : {
+            q.party.add_by_properties('koffing uncatchable=true level=' + t.party_member_level + ' hp_iv=0 attack_iv=0 defence_iv=0 special_attack_iv=0 special_defence_iv=0 speed_iv=0');
+        }
+    } : ((t.party_member == 7) || (t.party_member == 8)) ? {
+        (t.party_member_level >= 33) ? {
+            q.party.add_by_properties('camerupt uncatchable=true level=' + t.party_member_level + ' hp_iv=0 attack_iv=0 defence_iv=0 special_attack_iv=0 special_defence_iv=0 speed_iv=0');
+        } : {
+            q.party.add_by_properties('numel uncatchable=true level=' + t.party_member_level + ' hp_iv=0 attack_iv=0 defence_iv=0 special_attack_iv=0 special_defence_iv=0 speed_iv=0');
+        }
+    }  : ((t.party_member == 9) || (t.party_member == 10)) ? {
+        (t.party_member_level >= 36) ? {
+            q.party.add_by_properties('claydol uncatchable=true level=' + t.party_member_level + ' hp_iv=0 attack_iv=0 defence_iv=0 special_attack_iv=0 special_defence_iv=0 speed_iv=0');
+        } : {
+            q.party.add_by_properties('baltoy uncatchable=true level=' + t.party_member_level + ' hp_iv=0 attack_iv=0 defence_iv=0 special_attack_iv=0 special_defence_iv=0 speed_iv=0');
+        }
+    }
+});
+return 1;
