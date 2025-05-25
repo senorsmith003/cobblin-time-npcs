@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:nurse_bliss",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:nurse_bliss",
+      "model": "cobblemon:nurse_bliss.geo",
+      "texture": "cobblemon:textures/npcs/nurse_bliss/nurse_bliss.png",
+      "layers": []
+    }
+  ]
+}

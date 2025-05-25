@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:ringmaster_anastasia",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:ramona",
+      "model": "cobblemon:ramona.geo",
+      "texture": "cobblemon:textures/npcs/fairy_gym/anastasia.png",
+      "layers": []
+    }
+  ]
+}

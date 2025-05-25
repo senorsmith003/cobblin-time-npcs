@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:bug_catcher_cheryl",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:ramona",
+      "model": "cobblemon:ramona.geo",
+      "texture": "cobblemon:textures/npcs/grass_gym/cheryl.png",
+      "layers": []
+    }
+  ]
+}

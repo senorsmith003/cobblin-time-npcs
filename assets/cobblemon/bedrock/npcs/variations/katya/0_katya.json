@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:strongwoman_katya",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:ramona",
+      "model": "cobblemon:ramona.geo",
+      "texture": "cobblemon:textures/npcs/fairy_gym/strongwoman.png",
+      "layers": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "cobblemon:aether_scientist",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:ramona",
+      "model": "cobblemon:ramona.geo",
+      "texture": "cobblemon:textures/npcs/aether/aether_scientist.png",
+      "layers": []
+    }
+
+
+
+  ]
+}

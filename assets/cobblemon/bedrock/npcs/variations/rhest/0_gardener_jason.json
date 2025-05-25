@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:gardener_jason",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:rhest",
+      "model": "cobblemon:rhest.geo",
+      "texture": "cobblemon:textures/npcs/grass_gym/jason.png",
+      "layers": []
+    }
+  ]
+}

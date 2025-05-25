@@ -1,0 +1,44 @@
+{
+  "name": "cobblemon:galactic_f",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:ramona",
+      "model": "cobblemon:ramona.geo",
+      "texture": "cobblemon:textures/npcs/galactic/galactic_f.png",
+      "layers": []
+    },
+    {
+      "aspects": [ "2" ],
+      "poser": "cobblemon:ramona",
+      "model": "cobblemon:ramona.geo",
+      "texture": "cobblemon:textures/npcs/galactic/galactic_f2.png",
+      "layers": []
+    },
+    {
+      "aspects": [ "3" ],
+      "poser": "cobblemon:ramona",
+      "model": "cobblemon:ramona.geo",
+      "texture": "cobblemon:textures/npcs/galactic/galactic_f3.png",
+      "layers": []
+    },
+    {
+      "aspects": [ "4" ],
+      "poser": "cobblemon:ramona",
+      "model": "cobblemon:ramona.geo",
+      "texture": "cobblemon:textures/npcs/galactic/galactic_f4.png",
+      "layers": []
+    },
+    {
+      "aspects": [ "5" ],
+      "poser": "cobblemon:ramona",
+      "model": "cobblemon:ramona.geo",
+      "texture": "cobblemon:textures/npcs/galactic/galactic_f5.png",
+      "layers": []
+    }
+
+
+
+  ]
+}

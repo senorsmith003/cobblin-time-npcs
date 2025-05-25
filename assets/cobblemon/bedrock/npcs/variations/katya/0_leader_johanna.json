@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:leader_johanna",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:ramona",
+      "model": "cobblemon:ramona.geo",
+      "texture": "cobblemon:textures/npcs/grass_gym/johanna.png",
+      "layers": []
+    }
+  ]
+}

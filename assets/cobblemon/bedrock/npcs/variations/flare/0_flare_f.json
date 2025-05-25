@@ -1,0 +1,17 @@
+{
+  "name": "cobblemon:flare_f",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:ramona",
+      "model": "cobblemon:ramona.geo",
+      "texture": "cobblemon:textures/npcs/flare/flare_f.png",
+      "layers": []
+    }
+    
+
+
+
+  ]
+}

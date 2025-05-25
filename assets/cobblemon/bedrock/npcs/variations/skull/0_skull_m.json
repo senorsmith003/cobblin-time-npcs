@@ -1,0 +1,44 @@
+{
+  "name": "cobblemon:skull_m",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:rhest",
+      "model": "cobblemon:rhest.geo",
+      "texture": "cobblemon:textures/npcs/skull/skull_m.png",
+      "layers": []
+    },
+    {
+      "aspects": [ "2" ],
+      "poser": "cobblemon:rhest",
+      "model": "cobblemon:rhest.geo",
+      "texture": "cobblemon:textures/npcs/skull/skull_m2.png",
+      "layers": []
+    },
+    {
+      "aspects": [ "3" ],
+      "poser": "cobblemon:rhest",
+      "model": "cobblemon:rhest.geo",
+      "texture": "cobblemon:textures/npcs/skull/skull_m3.png",
+      "layers": []
+    },
+    {
+      "aspects": [ "4" ],
+      "poser": "cobblemon:rhest",
+      "model": "cobblemon:rhest.geo",
+      "texture": "cobblemon:textures/npcs/skull/skull_m4.png",
+      "layers": []
+    },
+    {
+      "aspects": [ "5" ],
+      "poser": "cobblemon:rhest",
+      "model": "cobblemon:rhest.geo",
+      "texture": "cobblemon:textures/npcs/skull/skull_m5.png",
+      "layers": []
+    }
+
+
+
+  ]
+}

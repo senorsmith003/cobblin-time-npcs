@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:farmer_paul",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:rhest",
+      "model": "cobblemon:rhest.geo",
+      "texture": "cobblemon:textures/npcs/grass_gym/paul.png",
+      "layers": []
+    }
+  ]
+}

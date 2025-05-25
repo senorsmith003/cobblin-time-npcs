@@ -1,0 +1,14 @@
+{
+  "name": "cobblemon:flare_m",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:rhest",
+      "model": "cobblemon:rhest.geo",
+      "texture": "cobblemon:textures/npcs/flare/flare_m.png",
+      "layers": []
+    }
+
+  ]
+}
