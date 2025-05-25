@@ -19,7 +19,7 @@
                 "Hmm....yes yes....oh?"
             ],
             "input": [
-                "q.run_command('setblock 72 64 44 minecraft:copper_bulb[lit=false]');",
+                "q.run_command('setblock -3528 124 3526 64 44 minecraft:copper_bulb[lit=false]');",
                 "q.dialogue.next_page();"
             ]
         },
