@@ -11,4 +11,4 @@ q.player.save_data();
 };
 q.run_command('setblock -3514 156 3547 copper_bulb[lit=true]');
 q.run_command('summon minecraft:item -3524 155 3542 {Item:{components:{"minecraft:custom_name":\'{text:"' + q.player.username + '",color:"dark_aqua"}\'},id:"minecraft:paper",count:1}}');
-return 0;
+return 1;
