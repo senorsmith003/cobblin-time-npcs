@@ -9,7 +9,7 @@
       "presets": [ "stronghold" ],
       "type": "npc",
       "context": "grounded",
-      "bucket": "common",
+      "bucket": "uncommon",
       "weight": 30,
       "condition": {
         "biomes": [
@@ -26,7 +26,7 @@
       "presets": [],
       "type": "npc",
       "context": "grounded",
-      "bucket": "common",
+      "bucket": "uncommon",
       "weight": 10.0,
       "weightMultiplier": {
         "multiplier": 3,
@@ -46,7 +46,7 @@
       "presets": [],
       "type": "npc",
       "context": "grounded",
-      "bucket": "common",
+      "bucket": "uncommon",
       "weight": 10,
       "weightMultiplier": {
         "multiplier": 3,
