@@ -6,7 +6,7 @@
     {
       "npc": "r_rocket_f",
       "id": "rrf-1",
-      "presets": ["natural"],
+      "presets": ["end_city"],
       "type": "npc",
       "context": "grounded",
       "bucket": "uncommon",
