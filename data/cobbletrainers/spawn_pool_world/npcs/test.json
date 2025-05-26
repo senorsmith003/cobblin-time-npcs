@@ -14,17 +14,6 @@
       "condition": {
         "biomes": ["#cobblemon:is_overworld"]
       }
-    },
-    {
-      "id": "test-2",
-      "npc": "youngster",
-      "type": "npc",
-      "context": "fishing",
-      "bucket": "common",
-      "weight": 100,
-      "condition": {
-        "biomes": ["#cobblemon:is_overworld"]
-      }
     }
   ]
 }
