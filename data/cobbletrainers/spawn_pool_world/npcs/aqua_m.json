@@ -9,7 +9,7 @@
       "presets": [ "natural" ],
       "type": "npc",
       "context": "grounded",
-      "bucket": "uncommon",
+      "bucket": "common",
       "weight": 2,
       "weightMultiplier": {
         "multiplier": 5,
