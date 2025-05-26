@@ -10,7 +10,7 @@
       "type": "npc",
       "context": "grounded",
       "bucket": "common",
-      "weight": 40,
+      "weight": 10,
       "weightMultiplier": {
         "multiplier": 1.5,
         "condition": {
