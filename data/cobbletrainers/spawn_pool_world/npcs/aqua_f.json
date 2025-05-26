@@ -10,9 +10,9 @@
       "type": "npc",
       "context": "grounded",
       "bucket": "common",
-      "weight": 10,
+      "weight": 2,
       "weightMultiplier": {
-        "multiplier": 2,
+        "multiplier": 5,
         "condition": {
           "timeRange": "night"
         }
@@ -31,7 +31,7 @@
       "presets": [ "natural" ],
       "type": "npc",
       "context": "grounded",
-      "bucket": "common",
+      "bucket": "uncommon",
       "weight": 10,
       "weightMultiplier": {
         "multiplier": 4,
