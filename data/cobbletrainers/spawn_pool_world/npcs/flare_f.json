@@ -9,7 +9,7 @@
       "presets": ["natural"],
       "type": "npc",
       "context": "grounded",
-      "bucket": "common",
+      "bucket": "uncommon",
       "weight": 7,
       "condition": {
         "biomes": [
