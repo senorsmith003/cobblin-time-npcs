@@ -21,6 +21,9 @@
         "biomes": [
           "terralith:tropical_jungle"
         ]
+      },
+      "anticondition": {
+        "neededNearbyBlocks": ["minecraft:end_portal_frame","minecraft:farmland"]
       }
     },
     {
@@ -41,6 +44,9 @@
         "biomes": [
           "#cobblemon:is_jungle"
         ]
+      },
+      "anticondition": {
+        "neededNearbyBlocks": ["minecraft:end_portal_frame","minecraft:farmland"]
       }
     },
     {
@@ -62,6 +68,9 @@
           "terralith:gravel_beach",
           "minecraft:beach"
         ]
+      },
+      "anticondition": {
+        "neededNearbyBlocks": ["minecraft:end_portal_frame","minecraft:farmland"]
       }
 
 
