@@ -17,7 +17,7 @@
         ]
       },
       "anticondition": {
-        "neededNearbyBlocks": ["minecraft:end_portal_frame"]
+        "neededNearbyBlocks": ["minecraft:end_portal_frame","minecraft:farmland"]
       }
     },
     {
@@ -38,6 +38,9 @@
         "biomes": [
           "terralith:warped_mesa"
         ]
+      },
+      "anticondition": {
+        "neededNearbyBlocks": ["minecraft:end_portal_frame","minecraft:farmland"]
       }
     },
     {
@@ -58,6 +61,9 @@
         "biomes": [
           "#cobblemon:is_mountain"
         ]
+      },
+      "anticondition": {
+        "neededNearbyBlocks": ["minecraft:end_portal_frame","minecraft:farmland"]
       }
     }
   ]
