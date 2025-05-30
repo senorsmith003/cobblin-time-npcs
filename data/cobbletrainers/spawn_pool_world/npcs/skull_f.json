@@ -50,8 +50,8 @@
       }
     },
     {
-      "npc": "skull_m",
-      "id": "npc-1",
+      "npc": "skull_f",
+      "id": "sf-3",
       "presets": [ "natural" ],
       "type": "npc",
       "context": "grounded",
