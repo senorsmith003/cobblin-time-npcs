@@ -25,7 +25,8 @@
       "anticondition": {
         "biomes": [
           "#cobblemon:is_ocean"
-        ]
+        ],
+        "nearbyBlocks":["minecraft:farmland"]
       }
     }
   ]
