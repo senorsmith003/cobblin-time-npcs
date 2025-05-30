@@ -40,7 +40,7 @@
         ]
       },
       "anticondition": {
-        "neededNearbyBlocks": ["minecraft:end_portal_frame","minecraft:farmland"]
+        "neededNearbyBlocks": ["minecraft:end_portal_frame","minecraft:farmland","chipped:blackstone_scales","chipped:obsidian_scales","chipped:crying_obsidian_scales","minecraft:polished_blackstone_bricks"]
       }
     },
     {
