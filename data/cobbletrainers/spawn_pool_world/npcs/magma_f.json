@@ -24,7 +24,10 @@
           "biomes": [
             "#cobblemon:is_badlands"
           ]
-        }
+        },
+      "anticondition": {
+        "neededNearbyBlocks": ["minecraft:end_portal_frame","minecraft:farmland"]
+      }
     },
     {
       "npc": "magma_f",
@@ -47,6 +50,9 @@
         "biomes": [
           "#cobblemon:is_desert"
         ]
+      },
+      "anticondition": {
+        "neededNearbyBlocks": ["minecraft:end_portal_frame","minecraft:farmland"]
       }
     },
     {
@@ -70,6 +76,9 @@
         "biomes": [
           "#cobblemon:is_volcanic"
         ]
+      },
+      "anticondition": {
+        "neededNearbyBlocks": ["minecraft:end_portal_frame","minecraft:farmland"]
       }
     }
   ]
