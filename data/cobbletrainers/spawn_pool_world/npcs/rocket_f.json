@@ -25,6 +25,9 @@
         "structures": [
           "#minecraft:village"
         ]
+      },
+      "anticondition": {
+        "neededNearbyBlocks": ["minecraft:end_portal_frame","minecraft:farmland"]
       }
     }
   ]
