@@ -4,7 +4,8 @@
       "§lPsychic/Fairy Gym Guide§r"
     ],
     "presets": [
-      "cobblemon:base_npc"
+      "cobblemon:base_npc",
+        "cobblemon:looks_around"
     ],
     "interaction": {
       "type": "dialogue",
