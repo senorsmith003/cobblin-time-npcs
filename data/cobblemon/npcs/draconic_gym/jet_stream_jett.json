@@ -6,7 +6,8 @@
   "presets": [
     "cobblemon:base_npc",
     "cobblemon:battle_npc",
-    "cobblemon:one_off_battle_npc"
+    "cobblemon:one_off_battle_npc",
+    "cobblemon:looks_around"
   ],
   "interaction": {
     "type": "dialogue",
